@@ -4,6 +4,8 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta name="description" content="Detecta Seguridad Integral - Sistemas contra incendios, cámaras y alarmas para industrias, depósitos y comercios en Córdoba. Certificación IRAM/NFPA.">
+<meta name="keywords" content="seguridad industrial cordoba, sistemas contra incendios, camaras seguridad, alarmas empresas, detecta">
+<meta name="author" content="Detecta Seguridad Integral">
 <title>Detecta Seguridad Integral | Córdoba</title>
 <link rel="preconnect" href="https://fonts.googleapis.com">
 <link href="https://fonts.googleapis.com/css2?family=Bebas+Neue&family=DM+Sans:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -98,109 +100,114 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 .segmento-card.highlight .segmento-trigger { color: rgba(255,255,255,0.65); }
 
 /* INCENDIOS */
-.incendios { padding: 6rem 2rem; position: relative; overflow: hidden; }
-.incendios::before { content: ''; position: absolute; top: 0; right: 0; width: 600px; height: 600px; background: radial-gradient(circle, rgba(239,68,68,0.07) 0%, transparent 70%); pointer-events: none; }
-.incendios-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: center; }
-.incendios-badge { display: inline-flex; align-items: center; gap: 0.5rem; background: rgba(239,68,68,0.1); border: 1px solid rgba(239,68,68,0.3); color: #FCA5A5; font-size: 0.75rem; font-weight: 600; letter-spacing: 2px; padding: 0.4rem 1rem; margin-bottom: 1.5rem; text-transform: uppercase; }
-.incendios h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 4vw, 3.5rem); letter-spacing: 2px; line-height: 1; margin-bottom: 1.2rem; }
-.incendios p { color: var(--g5); line-height: 1.75; margin-bottom: 1.2rem; font-size: 0.95rem; }
-.normativa-chips { display: flex; gap: 0.5rem; flex-wrap: wrap; margin: 1.5rem 0; }
-.chip { font-size: 0.75rem; font-weight: 600; color: var(--blue); background: rgba(26,86,240,0.1); border: 1px solid rgba(26,86,240,0.25); padding: 0.3rem 0.8rem; letter-spacing: 1px; }
-.incendios-items { display: flex; flex-direction: column; gap: 0.8rem; }
-.incendio-item { display: flex; align-items: flex-start; gap: 0.8rem; padding: 1.1rem 1.2rem; background: var(--g1); border-left: 3px solid var(--blue); }
-.incendio-item-icon { font-size: 1.2rem; flex-shrink: 0; }
-.incendio-item-text strong { display: block; font-size: 0.9rem; font-weight: 600; margin-bottom: 0.2rem; }
-.incendio-item-text span { font-size: 0.82rem; color: var(--g5); }
+.incendios { padding: 6rem 2rem; }
+.incendios-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5px; background: var(--g3); margin-top: 3.5rem; }
+.inc-item { background: var(--g1); padding: 2.5rem; transition: background 0.2s; position: relative; overflow: hidden; }
+.inc-item::before { content: ''; position: absolute; top: 0; left: 0; bottom: 0; width: 0; background: rgba(26,86,240,0.04); transition: width 0.3s; }
+.inc-item:hover { background: var(--g2); }
+.inc-item:hover::before { width: 100%; }
+.inc-header { display: flex; align-items: flex-start; gap: 1.5rem; margin-bottom: 1.5rem; position: relative; z-index: 1; }
+.inc-icon { font-size: 2.5rem; flex-shrink: 0; }
+.inc-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.5rem; letter-spacing: 1px; margin-bottom: 0.3rem; }
+.inc-code { font-size: 0.7rem; color: var(--g4); letter-spacing: 1px; }
+.inc-desc { font-size: 0.9rem; color: var(--g5); line-height: 1.7; margin-bottom: 1.2rem; position: relative; z-index: 1; }
+.inc-usos { display: flex; flex-direction: column; gap: 0.4rem; position: relative; z-index: 1; }
+.inc-uso { font-size: 0.8rem; color: var(--g4); padding-left: 1rem; position: relative; }
+.inc-uso::before { content: '→'; position: absolute; left: 0; color: var(--blue); }
 
-/* SERVICIOS */
-.servicios { padding: 6rem 2rem; background: var(--g1); }
-.servicios-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--g3); }
-.servicio-card { background: var(--g1); padding: 2rem; transition: background 0.2s; position: relative; overflow: hidden; }
-.servicio-card::before { content: ''; position: absolute; top: 0; left: 0; width: 0; height: 3px; background: var(--blue); transition: width 0.3s; }
-.servicio-card:hover { background: var(--g2); }
-.servicio-card:hover::before { width: 100%; }
-.servicio-icon { font-size: 1.8rem; margin-bottom: 1rem; display: block; }
-.servicio-num { font-family: 'Bebas Neue', sans-serif; font-size: 0.85rem; color: var(--blue); letter-spacing: 2px; margin-bottom: 0.5rem; }
-.servicio-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 1px; margin-bottom: 0.8rem; }
-.servicio-desc { font-size: 0.85rem; color: var(--g5); line-height: 1.6; }
+/* CAMARAS */
+.camaras { padding: 6rem 2rem; background: var(--g1); }
+.camaras-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 1.5px; background: var(--g3); margin-top: 3.5rem; }
+.cam-card { background: var(--g1); padding: 2rem; transition: background 0.2s; }
+.cam-card:hover { background: var(--g2); }
+.cam-icon { font-size: 2rem; margin-bottom: 1rem; }
+.cam-tipo { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.4rem; }
+.cam-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 1px; margin-bottom: 0.8rem; }
+.cam-desc { font-size: 0.85rem; color: var(--g5); line-height: 1.6; margin-bottom: 1rem; }
+.cam-specs { display: flex; flex-direction: column; gap: 0.3rem; }
+.cam-spec { font-size: 0.75rem; color: var(--g4); }
 
-/* MENSAJES CLAVE */
-.mensajes { padding: 6rem 2rem; }
-.mensajes-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5px; background: var(--g3); margin-top: 3.5rem; }
-.mensaje-card { background: var(--dark); padding: 2rem 2.5rem; display: flex; align-items: flex-start; gap: 1.2rem; transition: background 0.2s; }
-.mensaje-card:hover { background: var(--g1); }
-.mensaje-check { font-size: 1.1rem; flex-shrink: 0; margin-top: 0.1rem; }
-.mensaje-text strong { display: block; font-size: 1rem; font-weight: 600; margin-bottom: 0.4rem; color: var(--white); }
-.mensaje-text span { font-size: 0.85rem; color: var(--g5); line-height: 1.6; }
+/* ALARMAS */
+.alarmas { padding: 6rem 2rem; }
+.alarmas-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 2rem; margin-top: 3.5rem; }
+.alarma-card { background: var(--g1); border: 1px solid var(--g3); padding: 2.5rem; transition: all 0.2s; }
+.alarma-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+.alarma-header { display: flex; align-items: center; gap: 1rem; margin-bottom: 1.5rem; }
+.alarma-icon { font-size: 2rem; }
+.alarma-name { font-family: 'Bebas Neue', sans-serif; font-size: 1.4rem; letter-spacing: 1px; }
+.alarma-desc { font-size: 0.9rem; color: var(--g5); line-height: 1.7; margin-bottom: 1.5rem; }
+.alarma-features { display: flex; flex-direction: column; gap: 0.5rem; }
+.alarma-feature { font-size: 0.8rem; color: var(--white); padding: 0.5rem 0; border-bottom: 1px solid var(--g3); }
+.alarma-feature:last-child { border: none; }
 
 /* PROYECTOS */
 .proyectos { padding: 6rem 2rem; background: var(--g1); }
-.proyectos-grid { display: grid; grid-template-columns: repeat(2, 1fr); gap: 1.5px; background: var(--g3); margin-top: 3.5rem; }
-.proyecto-card { background: var(--g1); padding: 2.5rem; transition: background 0.2s; }
-.proyecto-card:hover { background: var(--g2); }
-.proyecto-header { display: flex; align-items: center; justify-content: space-between; margin-bottom: 1.2rem; }
-.proyecto-num { font-family: 'Bebas Neue', sans-serif; font-size: 2.5rem; color: var(--g3); letter-spacing: 2px; line-height: 1; }
-.proyecto-tag { font-size: 0.72rem; font-weight: 600; color: var(--blue); letter-spacing: 2px; text-transform: uppercase; background: rgba(26,86,240,0.1); border: 1px solid rgba(26,86,240,0.2); padding: 0.3rem 0.8rem; }
-.proyecto-cliente { font-family: 'Bebas Neue', sans-serif; font-size: 1.6rem; letter-spacing: 2px; color: var(--white); margin-bottom: 1rem; line-height: 1.1; }
-.proyecto-desc { font-size: 0.88rem; color: var(--g5); line-height: 1.7; margin-bottom: 1.5rem; }
-.proyecto-items { display: flex; flex-wrap: wrap; gap: 0.5rem; }
-.proyecto-items span { font-size: 0.75rem; color: var(--g4); background: var(--g2); padding: 0.3rem 0.7rem; }
+.proyectos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
+.proyecto-card { background: var(--g2); border: 1px solid var(--g3); padding: 2rem; transition: all 0.2s; }
+.proyecto-card:hover { border-color: var(--blue); transform: translateY(-2px); }
+.proyecto-tipo { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem; }
+.proyecto-title { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 1px; margin-bottom: 0.5rem; }
+.proyecto-empresa { font-size: 0.8rem; color: var(--g4); margin-bottom: 1.2rem; }
+.proyecto-items { display: flex; flex-direction: column; gap: 0.4rem; }
+.proyecto-items span { font-size: 0.8rem; color: var(--g5); }
 
-/* POR QUÉ */
+/* PORQUE */
 .porque { padding: 6rem 2rem; }
 .porque-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3.5rem; }
-.porque-item { text-align: center; padding: 2rem 1rem; border: 1px solid var(--g3); transition: border-color 0.2s; }
-.porque-item:hover { border-color: var(--blue); }
-.porque-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; color: var(--blue); letter-spacing: 2px; display: block; margin-bottom: 0.3rem; }
-.porque-label { font-size: 0.85rem; color: var(--g5); line-height: 1.5; }
+.porque-item { text-align: center; }
+.porque-num { font-family: 'Bebas Neue', sans-serif; font-size: 3rem; letter-spacing: 2px; color: var(--blue); display: block; margin-bottom: 0.8rem; }
+.porque-label { font-size: 0.85rem; color: var(--g5); line-height: 1.6; }
 
 /* CONTACTO */
 .contacto { padding: 6rem 2rem; background: var(--g1); }
-.contacto-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; align-items: start; }
-.contacto-left h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 4vw, 3.5rem); letter-spacing: 2px; line-height: 1; margin-bottom: 1rem; }
-.contacto-left p { color: var(--g5); line-height: 1.75; margin-bottom: 2rem; font-size: 0.95rem; }
-.contacto-info { display: flex; flex-direction: column; gap: 1rem; }
-.contacto-info-item { display: flex; align-items: center; gap: 1rem; padding: 1rem; background: var(--dark); border: 1px solid var(--g3); }
-.contacto-info-icon { width: 40px; height: 40px; background: rgba(26,86,240,0.1); border: 1px solid rgba(26,86,240,0.2); display: flex; align-items: center; justify-content: center; font-size: 1rem; flex-shrink: 0; }
-.contacto-info-text strong { display: block; font-size: 0.8rem; color: var(--g5); letter-spacing: 1px; text-transform: uppercase; margin-bottom: 0.2rem; }
-.contacto-info-text a, .contacto-info-text span { color: var(--white); text-decoration: none; font-size: 0.95rem; }
-.contacto-info-text a:hover { color: var(--accent); }
-.contacto-form { background: var(--dark); border: 1px solid var(--g3); padding: 2.5rem; position: relative; }
+.contacto-inner { max-width: 1100px; margin: 0 auto; display: grid; grid-template-columns: 1fr 1fr; gap: 5rem; }
+.contacto-left h2 { font-family: 'Bebas Neue', sans-serif; font-size: clamp(2.5rem, 5vw, 4rem); letter-spacing: 2px; line-height: 1; margin-bottom: 1.5rem; }
+.contacto-left p { font-size: 1rem; color: var(--g5); line-height: 1.75; margin-bottom: 3rem; }
+.contacto-info { display: flex; flex-direction: column; gap: 1.5rem; }
+.contacto-info-item { display: flex; gap: 1rem; }
+.contacto-info-icon { font-size: 1.5rem; flex-shrink: 0; }
+.contacto-info-text { display: flex; flex-direction: column; gap: 0.2rem; }
+.contacto-info-text strong { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--g4); }
+.contacto-info-text a, .contacto-info-text span { font-size: 0.95rem; color: var(--white); text-decoration: none; transition: color 0.2s; }
+.contacto-info-text a:hover { color: var(--blue); }
+.contacto-form { background: var(--g2); border: 1px solid var(--g3); padding: 2.5rem; position: relative; }
 .contacto-form::before { content: ''; position: absolute; top: 0; left: 0; right: 0; height: 3px; background: var(--blue); }
 
-/* WA FLOAT */
-.wa-float { position: fixed; bottom: 2rem; right: 2rem; z-index: 200; width: 58px; height: 58px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; text-decoration: none; box-shadow: 0 4px 20px rgba(37,211,102,0.4); animation: wabounce 3s ease-in-out infinite; }
-@keyframes wabounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(-6px); } }
-.wa-float:hover { transform: scale(1.1) !important; animation: none; }
-.wa-float svg { width: 28px; height: 28px; fill: white; }
-
 /* FOOTER */
-footer { padding: 2rem; border-top: 1px solid var(--g3); }
-.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; align-items: center; justify-content: space-between; flex-wrap: wrap; gap: 1rem; }
+footer { padding: 3rem 2rem; border-top: 1px solid var(--g3); }
+.footer-inner { max-width: 1100px; margin: 0 auto; display: flex; justify-content: space-between; align-items: center; }
 .footer-logo { font-family: 'Bebas Neue', sans-serif; font-size: 1.3rem; letter-spacing: 3px; }
 .footer-logo span { color: var(--blue); }
-.footer-right { display: flex; align-items: center; gap: 1.5rem; flex-wrap: wrap; }
-.footer-copy { font-size: 0.8rem; color: var(--g4); }
-.footer-ig { display: inline-flex; align-items: center; gap: 0.4rem; color: var(--g4); text-decoration: none; font-size: 0.85rem; transition: color 0.2s; }
+.footer-right { display: flex; align-items: center; gap: 2rem; }
+.footer-ig { display: flex; align-items: center; gap: 0.5rem; font-size: 0.85rem; color: var(--g5); text-decoration: none; transition: color 0.2s; }
 .footer-ig:hover { color: var(--white); }
-.footer-ig svg { width: 16px; height: 16px; }
+.footer-ig svg { width: 20px; height: 20px; }
+.footer-copy { font-size: 0.8rem; color: var(--g4); }
 
-/* ANIMATE */
-.fade-in { opacity: 0; transform: translateY(24px); transition: opacity 0.6s ease, transform 0.6s ease; }
+/* WA FLOAT */
+.wa-float { position: fixed; bottom: 2rem; right: 2rem; width: 60px; height: 60px; background: #25D366; border-radius: 50%; display: flex; align-items: center; justify-content: center; box-shadow: 0 4px 12px rgba(37,211,102,0.4); transition: all 0.3s; z-index: 99; }
+.wa-float:hover { transform: scale(1.1); box-shadow: 0 6px 20px rgba(37,211,102,0.6); }
+.wa-float svg { width: 32px; height: 32px; fill: white; }
+
+/* FADE IN */
+.fade-in { opacity: 0; transform: translateY(30px); transition: opacity 0.8s, transform 0.8s; }
 .fade-in.visible { opacity: 1; transform: translateY(0); }
 
 /* RESPONSIVE */
-@media (max-width: 900px) {
-  .hero-inner, .incendios-inner, .contacto-inner { grid-template-columns: 1fr; gap: 3rem; }
-  .servicios-grid, .segmentos-grid { grid-template-columns: repeat(2, 1fr); }
-  .porque-grid { grid-template-columns: repeat(2, 1fr); }
-  .proyectos-grid, .mensajes-grid { grid-template-columns: 1fr; }
+@media (max-width: 768px) {
+  nav { padding: 1rem; }
   .nav-links { display: none; }
-}
-@media (max-width: 600px) {
-  .servicios-grid, .segmentos-grid, .porque-grid { grid-template-columns: 1fr; }
-  .clientes-inner { flex-direction: column; align-items: flex-start; gap: 1rem; }
-  .hero-stats { gap: 1.5rem; }
+  .hero-inner { grid-template-columns: 1fr; }
+  .hero-stats { flex-direction: column; gap: 1.5rem; }
+  .segmentos-grid { grid-template-columns: 1fr; gap: 0; }
+  .incendios-grid { grid-template-columns: 1fr; gap: 0; }
+  .camaras-grid { grid-template-columns: 1fr; gap: 0; }
+  .alarmas-grid { grid-template-columns: 1fr; }
+  .proyectos-grid { grid-template-columns: 1fr; }
+  .porque-grid { grid-template-columns: 1fr; gap: 2rem; }
+  .contacto-inner { grid-template-columns: 1fr; gap: 3rem; }
+  .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
+  .footer-right { flex-direction: column; }
 }
 </style>
 </head>
@@ -210,73 +217,65 @@ footer { padding: 2rem; border-top: 1px solid var(--g3); }
 <nav>
   <a href="#" class="nav-logo">DETECTA<span>.</span></a>
   <div class="nav-links">
-    <a href="#segmentos" class="nav-link">Sectores</a>
+    <a href="#segmentos" class="nav-link">Segmentos</a>
     <a href="#servicios" class="nav-link">Servicios</a>
     <a href="#proyectos" class="nav-link">Proyectos</a>
-    <a href="#contacto" class="nav-link">Contacto</a>
+    <a href="#contacto" class="nav-cta">CONTACTO</a>
   </div>
-  <a href="#contacto" class="nav-cta">SOLICITÁ PRESUPUESTO</a>
 </nav>
 
 <!-- HERO -->
 <section class="hero">
   <div class="hero-inner">
     <div>
-      <div class="hero-tag">Córdoba · Seguridad Integral · PCI Certificado</div>
-      <h1>TU OPERACIÓN<br><span class="blue">NO PUEDE</span><br><span class="dim">PARAR.</span></h1>
-      <p>Instalamos y certificamos sistemas contra incendios, cámaras y alarmas para industrias, depósitos y comercios en Córdoba. Cumplimiento IRAM/NFPA. Relevamiento sin cargo.</p>
+      <div class="hero-tag">✓ CERTIFICACIÓN IRAM/NFPA</div>
+      <h1>SEGURIDAD<br>QUE SE<br><span class="blue">ADAPTA</span><br><span class="dim">A TU</span><br><span class="dim">OPERACIÓN</span></h1>
+      <p>Sistemas contra incendios, videovigilancia y control de accesos para industrias, depósitos y comercios en Córdoba. Normativa al día, respuesta en el día.</p>
       <div class="hero-btns">
-        <a href="https://wa.me/5493515503938?text=Hola%2C%20me%20contacto%20desde%20la%20web%20de%20Detecta.%20Quiero%20un%20relevamiento%20gratuito." class="btn-primary" target="_blank">💬 Consultá sin cargo</a>
-        <a href="#segmentos" class="btn-secondary">Ver sectores →</a>
+        <a href="#contacto" class="btn-primary">SOLICITAR RELEVAMIENTO →</a>
+        <a href="https://wa.me/5493515503938?text=Hola%2C%20me%20contacto%20desde%20la%20web%20de%20Detecta." target="_blank" class="btn-secondary">
+          <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+          WhatsApp
+        </a>
       </div>
       <div class="hero-stats">
         <div><div class="stat-num">+50</div><div class="stat-label">Proyectos</div></div>
-        <div><div class="stat-num">IRAM</div><div class="stat-label">Certificación</div></div>
-        <div><div class="stat-num">0$</div><div class="stat-label">Relevamiento</div></div>
+        <div><div class="stat-num">IRAM</div><div class="stat-label">Certificado</div></div>
+        <div><div class="stat-num">24h</div><div class="stat-label">Respuesta</div></div>
       </div>
     </div>
-    <div class="hero-form-wrap fade-in">
-      <div class="form-title">SOLICITÁ TU PRESUPUESTO</div>
-      <div class="form-sub">Sin compromiso · Respondemos en el día</div>
-      <form id="heroForm" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
-        <input type="hidden" name="_subject" value="Nuevo prospecto desde detecta.com.ar">
+    <div class="hero-form-wrap">
+      <div class="form-title">CONSULTA EXPRESS</div>
+      <div class="form-sub">Te respondemos en el día</div>
+      <form id="heroForm" action="https://formspree.io/f/xeojgzbw" method="POST">
+        <input type="hidden" name="_subject" value="Consulta express - detecta.com.ar">
         <div class="form-group">
-          <label>Nombre y empresa</label>
-          <input type="text" name="nombre" placeholder="Tu nombre y empresa" required>
+          <label>Rubro/Tipo de instalación</label>
+          <select name="rubro" required>
+            <option value="">Seleccionar...</option>
+            <option value="Industria">Industria / Planta</option>
+            <option value="Depósito">Depósito / Logística</option>
+            <option value="Comercio">Comercio / Local</option>
+            <option value="Oficinas">Oficinas / Edificio</option>
+            <option value="Otro">Otro</option>
+          </select>
         </div>
         <div class="form-group">
           <label>Teléfono</label>
           <input type="tel" name="telefono" placeholder="351 000-0000" required>
         </div>
         <div class="form-group">
-          <label>Rubro</label>
-          <select name="rubro" required>
-            <option value="" disabled selected>¿En qué sector estás?</option>
-            <option>Industria / Manufactura</option>
-            <option>Depósito / Logística</option>
-            <option>Construcción / Obra</option>
-            <option>Edificio comercial / Oficinas</option>
-            <option>Hotel / Clínica / Salud</option>
-            <option>Comercio / PyME</option>
-            <option>Otro</option>
-          </select>
+          <label>Email (opcional)</label>
+          <input type="email" name="email" placeholder="tu@email.com">
         </div>
         <div class="form-group">
-          <label>Necesidad principal</label>
-          <select name="servicio">
-            <option value="" disabled selected>¿Qué necesitás?</option>
-            <option>Sistema contra incendios (PCI)</option>
-            <option>Certificación para habilitación municipal</option>
-            <option>Cámaras de seguridad</option>
-            <option>Alarmas y acceso</option>
-            <option>Auditoría / Relevamiento técnico</option>
-            <option>Varios servicios</option>
-          </select>
+          <label>Mensaje</label>
+          <textarea name="mensaje" placeholder="¿Qué necesitás?"></textarea>
         </div>
-        <button type="submit" class="form-submit">QUIERO MI RELEVAMIENTO GRATIS →</button>
+        <button type="submit" class="form-submit">ENVIAR CONSULTA →</button>
       </form>
       <div class="form-success" id="heroSuccess">✓ ¡Mensaje enviado! Te contactamos en el día.</div>
-      <div class="form-note">🔒 Tus datos están seguros. No compartimos información.</div>
+      <div class="form-note">🔒 Tu información está protegida</div>
     </div>
   </div>
 </section>
@@ -284,12 +283,13 @@ footer { padding: 2rem; border-top: 1px solid var(--g3); }
 <!-- CLIENTES -->
 <section class="clientes">
   <div class="clientes-inner">
-    <div class="clientes-label">Empresas que confían</div>
+    <div class="clientes-label">TRABAJAN CON NOSOTROS:</div>
     <div class="clientes-list">
-      <div class="cliente-name">SUPERCEMENTO</div>
-      <div class="cliente-name">SERVICIO PENITENCIARIO</div>
-      <div class="cliente-name">MERCADO NORTE</div>
-      <div class="cliente-name">MEGATONE</div>
+      <span class="cliente-name">ARCOR</span>
+      <span class="cliente-name">COMEGA</span>
+      <span class="cliente-name">MOLINOS</span>
+      <span class="cliente-name">FADEL</span>
+      <span class="cliente-name">+50 EMPRESAS</span>
     </div>
   </div>
 </section>
@@ -297,74 +297,41 @@ footer { padding: 2rem; border-top: 1px solid var(--g3); }
 <!-- SEGMENTOS -->
 <section class="segmentos" id="segmentos">
   <div class="section-inner">
-    <div class="section-tag">A quién le servimos</div>
-    <h2 class="section-title">SECTORES<br>QUE ATENDEMOS</h2>
-    <p class="section-sub">Trabajamos con empresas donde la seguridad no es opcional — es una exigencia normativa, de seguros y de continuidad operativa.</p>
+    <div class="section-tag fade-in">A quién ayudamos</div>
+    <h2 class="section-title fade-in">CADA OPERACIÓN<br>TIENE SUS REGLAS</h2>
+    <p class="section-sub fade-in">No vendemos cajas. Diseñamos sistemas que entienden el riesgo real de tu tipo de operación y cumplen la normativa específica que te aplica.</p>
     <div class="segmentos-grid fade-in">
-      <div class="segmento-card highlight">
+      <div class="segmento-card">
         <span class="segmento-icon">🏭</span>
-        <div class="segmento-prioridad">Prioridad alta</div>
-        <div class="segmento-name">INDUSTRIA & MANUFACTURA</div>
-        <p class="segmento-desc">Metalúrgicas, alimentos, plásticos, química. Alta carga de fuego y auditorías de ART frecuentes.</p>
+        <div class="segmento-prioridad">ALTA PRIORIDAD</div>
+        <h3 class="segmento-name">INDUSTRIAS</h3>
+        <p class="segmento-desc">Plantas con procesos críticos, almacenamiento de inflamables, maquinaria pesada.</p>
         <div class="segmento-triggers">
-          <span class="segmento-trigger">→ Auditorías de ART y aseguradoras</span>
-          <span class="segmento-trigger">→ Continuidad operativa crítica</span>
-          <span class="segmento-trigger">→ Normativa IRAM/NFPA obligatoria</span>
+          <span class="segmento-trigger">→ Riesgo de incendio alto</span>
+          <span class="segmento-trigger">→ Auditorías IRAM pendientes</span>
+          <span class="segmento-trigger">→ Equipos > 10 años</span>
         </div>
       </div>
       <div class="segmento-card highlight">
         <span class="segmento-icon">📦</span>
-        <div class="segmento-prioridad">Prioridad alta</div>
-        <div class="segmento-name">DEPÓSITOS & LOGÍSTICA</div>
-        <p class="segmento-desc">Centros de distribución, depósitos mayoristas, e-commerce. Alta carga de fuego y seguros que exigen sistemas certificados.</p>
+        <div class="segmento-prioridad">PRIORIDAD MÁXIMA</div>
+        <h3 class="segmento-name">DEPÓSITOS Y LOGÍSTICA</h3>
+        <p class="segmento-desc">Centros de distribución, almacenes de gran volumen, operación 24/7.</p>
         <div class="segmento-triggers">
-          <span class="segmento-trigger">→ Seguros obligan sprinklers e hidrantes</span>
-          <span class="segmento-trigger">→ Grandes superficies sin cobertura</span>
-          <span class="segmento-trigger">→ Inspecciones municipales frecuentes</span>
-        </div>
-      </div>
-      <div class="segmento-card">
-        <span class="segmento-icon">🏗️</span>
-        <div class="segmento-prioridad">Momento ideal</div>
-        <div class="segmento-name">CONSTRUCCIÓN & OBRAS</div>
-        <p class="segmento-desc">Nuevos edificios, housing, torres. El PCI va en el proyecto, no al final. Instalamos desde el día 1 de obra.</p>
-        <div class="segmento-triggers">
-          <span class="segmento-trigger">→ Certificación previa a entrega</span>
-          <span class="segmento-trigger">→ Diseño integrado al proyecto</span>
-          <span class="segmento-trigger">→ Cumplimiento de planos municipales</span>
+          <span class="segmento-trigger">→ Mercadería de alto valor</span>
+          <span class="segmento-trigger">→ Superficies > 1000m²</span>
+          <span class="segmento-trigger">→ Seguros exigen certificación</span>
         </div>
       </div>
       <div class="segmento-card">
         <span class="segmento-icon">🏢</span>
-        <div class="segmento-prioridad">Habilitación</div>
-        <div class="segmento-name">EDIFICIOS COMERCIALES</div>
-        <p class="segmento-desc">Shoppings, oficinas, hoteles, clínicas. Responsabilidad civil y habilitación municipal exigen sistemas certificados.</p>
+        <div class="segmento-prioridad">ALTA PRIORIDAD</div>
+        <h3 class="segmento-name">COMERCIOS Y OFICINAS</h3>
+        <p class="segmento-desc">Locales comerciales, oficinas corporativas, edificios con afluencia de público.</p>
         <div class="segmento-triggers">
-          <span class="segmento-trigger">→ Normas IRAM / NFPA</span>
-          <span class="segmento-trigger">→ Responsabilidad civil del propietario</span>
-          <span class="segmento-trigger">→ Habilitación municipal obligatoria</span>
-        </div>
-      </div>
-      <div class="segmento-card">
-        <span class="segmento-icon">🏪</span>
-        <div class="segmento-prioridad">Comercios & PyMEs</div>
-        <div class="segmento-name">COMERCIOS & PYMES</div>
-        <p class="segmento-desc">Locales, negocios y PyMEs en Córdoba que necesitan certificación para habilitar o renovar su habilitación municipal.</p>
-        <div class="segmento-triggers">
-          <span class="segmento-trigger">→ Inspección municipal</span>
-          <span class="segmento-trigger">→ Clausura por incumplimiento</span>
-          <span class="segmento-trigger">→ Relevamiento sin cargo</span>
-        </div>
-      </div>
-      <div class="segmento-card">
-        <span class="segmento-icon">🔒</span>
-        <div class="segmento-prioridad">Nicho premium</div>
-        <div class="segmento-name">SECTORES CRÍTICOS</div>
-        <p class="segmento-desc">Data centers, bancos, telecomunicaciones. Detección temprana y gases limpios donde el agua no es una opción.</p>
-        <div class="segmento-triggers">
-          <span class="segmento-trigger">→ Sistemas de gases limpios</span>
-          <span class="segmento-trigger">→ Detección temprana VESDA</span>
-          <span class="segmento-trigger">→ Cero tolerancia al tiempo de parada</span>
+          <span class="segmento-trigger">→ Habilitación municipal requerida</span>
+          <span class="segmento-trigger">→ Gran afluencia de público</span>
+          <span class="segmento-trigger">→ Seguros piden cobertura</span>
         </div>
       </div>
     </div>
@@ -372,85 +339,152 @@ footer { padding: 2rem; border-top: 1px solid var(--g3); }
 </section>
 
 <!-- INCENDIOS -->
-<section class="incendios" id="incendios">
-  <div class="incendios-inner">
-    <div class="fade-in">
-      <div class="incendios-badge">⚠ Obligatorio · Córdoba</div>
-      <h2>PREVENCIÓN<br>DE INCENDIOS<br>CERTIFICADA</h2>
-      <p>Un incendio para tu operación. La certificación la reactiva. En Detecta diseñamos, instalamos y certificamos sistemas PCI para industrias, depósitos y comercios en Córdoba.</p>
-      <p>No vendemos equipos. Vendemos cumplimiento, continuidad y protección real.</p>
-      <div class="normativa-chips">
-        <span class="chip">IRAM 3597</span>
-        <span class="chip">NFPA 13</span>
-        <span class="chip">Ord. Municipal Córdoba</span>
-        <span class="chip">ART Certificado</span>
+<section class="incendios" id="servicios">
+  <div class="section-inner">
+    <div class="section-tag fade-in">Sistemas contra incendios</div>
+    <h2 class="section-title fade-in">DETECCIÓN Y SUPRESIÓN<br>CERTIFICADA IRAM/NFPA</h2>
+    <p class="section-sub fade-in">Desde matafuegos hasta rociadores automáticos. Todo con planos conforme a obra, cálculo hidráulico y certificación vigente.</p>
+    <div class="incendios-grid fade-in">
+      <div class="inc-item">
+        <div class="inc-header">
+          <span class="inc-icon">🔥</span>
+          <div>
+            <h3 class="inc-title">DETECCIÓN AUTOMÁTICA</h3>
+            <p class="inc-code">IRAM 3569 / NFPA 72</p>
+          </div>
+        </div>
+        <p class="inc-desc">Paneles de control, detectores iónicos/ópticos/térmicos, pulsadores manuales, sirenas. Zonificación inteligente según planta.</p>
+        <div class="inc-usos">
+          <span class="inc-uso">Fábricas con procesos críticos</span>
+          <span class="inc-uso">Depósitos de productos inflamables</span>
+          <span class="inc-uso">Edificios con normativa vigente</span>
+        </div>
       </div>
-      <a href="#contacto" class="btn-primary" style="margin-top:0.5rem;display:inline-flex;">SOLICITÁ RELEVAMIENTO GRATIS →</a>
-    </div>
-    <div class="incendios-items fade-in">
-      <div class="incendio-item">
-        <span class="incendio-item-icon">🔍</span>
-        <div class="incendio-item-text"><strong>Relevamiento técnico gratuito</strong><span>Evaluamos tu planta, depósito o comercio y determinamos exactamente qué necesitás según normativa.</span></div>
+      <div class="inc-item">
+        <div class="inc-header">
+          <span class="inc-icon">💧</span>
+          <div>
+            <h3 class="inc-title">ROCIADORES AUTOMÁTICOS</h3>
+            <p class="inc-code">IRAM 3546 / NFPA 13</p>
+          </div>
+        </div>
+        <p class="inc-desc">Sistemas húmedos/secos, válvulas de control, bombas jockey y principal. Cálculo hidráulico completo, planos conforme a obra.</p>
+        <div class="inc-usos">
+          <span class="inc-uso">Depósitos > 1000m²</span>
+          <span class="inc-uso">Industrias con riesgo alto</span>
+          <span class="inc-uso">Habilitaciones comerciales</span>
+        </div>
       </div>
-      <div class="incendio-item">
-        <span class="incendio-item-icon">📐</span>
-        <div class="incendio-item-text"><strong>Ingeniería y diseño PCI</strong><span>Proyecto a medida según tipo de riesgo, superficie y actividad. Planos y memorias técnicas incluidas.</span></div>
+      <div class="inc-item">
+        <div class="inc-header">
+          <span class="inc-icon">🧯</span>
+          <div>
+            <h3 class="inc-title">EXTINTORES PORTÁTILES</h3>
+            <p class="inc-code">IRAM 3517</p>
+          </div>
+        </div>
+        <p class="inc-desc">ABC/CO2/K según clase de fuego. Distribución calculada por m², señalización, recarga anual con certificado.</p>
+        <div class="inc-usos">
+          <span class="inc-uso">Requisito mínimo en toda instalación</span>
+          <span class="inc-uso">Habilitación municipal</span>
+          <span class="inc-uso">Auditoría de seguros</span>
+        </div>
       </div>
-      <div class="incendio-item">
-        <span class="incendio-item-icon">🛠️</span>
-        <div class="incendio-item-text"><strong>Instalación certificada</strong><span>Detectores, rociadores, hidrantes, matafuegos y señalización homologada. Mano de obra especializada.</span></div>
-      </div>
-      <div class="incendio-item">
-        <span class="incendio-item-icon">📋</span>
-        <div class="incendio-item-text"><strong>Certificación y habilitación</strong><span>Tramitamos la documentación ante municipio, ART y aseguradoras. Vos no movés un papel.</span></div>
-      </div>
-      <div class="incendio-item">
-        <span class="incendio-item-icon">🔄</span>
-        <div class="incendio-item-text"><strong>Mantenimiento periódico</strong><span>Abono mensual para mantener todo en regla, funcionando y listo para cualquier auditoría.</span></div>
+      <div class="inc-item">
+        <div class="inc-header">
+          <span class="inc-icon">🚪</span>
+          <div>
+            <h3 class="inc-title">ILUMINACIÓN DE EMERGENCIA</h3>
+            <p class="inc-code">IRAM-AADL J2024</p>
+          </div>
+        </div>
+        <p class="inc-desc">Luces de salida, señalización fotoluminiscente, balizas autónomas. Cálculo de lux según normativa.</p>
+        <div class="inc-usos">
+          <span class="inc-uso">Locales comerciales</span>
+          <span class="inc-uso">Edificios corporativos</span>
+          <span class="inc-uso">Depósitos con personal</span>
+        </div>
       </div>
     </div>
   </div>
 </section>
 
-<!-- SERVICIOS -->
-<section class="servicios" id="servicios">
+<!-- CÁMARAS -->
+<section class="camaras">
   <div class="section-inner">
-    <div class="section-tag">Lo que hacemos</div>
-    <h2 class="section-title">TODOS LOS<br>SERVICIOS</h2>
-    <p class="section-sub">Un solo proveedor para toda la seguridad de tu empresa. Sin intermediarios, sin burocracia.</p>
-    <div class="servicios-grid fade-in">
-      <div class="servicio-card"><span class="servicio-icon">🔥</span><div class="servicio-num">01</div><div class="servicio-name">PREVENCIÓN DE INCENDIOS</div><p class="servicio-desc">Diseño, instalación y certificación de sistemas PCI para industrias, depósitos y comercios. Normas IRAM/NFPA.</p></div>
-      <div class="servicio-card"><span class="servicio-icon">📹</span><div class="servicio-num">02</div><div class="servicio-name">CÁMARAS DE SEGURIDAD</div><p class="servicio-desc">Sistemas CCTV profesionales para vigilancia interior y exterior. Monitoreo continuo y cobertura total de perímetro.</p></div>
-      <div class="servicio-card"><span class="servicio-icon">🚨</span><div class="servicio-num">03</div><div class="servicio-name">ALARMAS</div><p class="servicio-desc">Sistemas de alarma con sensores de movimiento, apertura y monitoreo para industrias, depósitos y comercios.</p></div>
-      <div class="servicio-card"><span class="servicio-icon">🚪</span><div class="servicio-num">04</div><div class="servicio-name">CONTROL DE ACCESO</div><p class="servicio-desc">Lectores biométricos, tarjetas RFID y portones eléctricos. Controlá quién entra y cuándo en toda tu instalación.</p></div>
-      <div class="servicio-card"><span class="servicio-icon">⚡</span><div class="servicio-num">05</div><div class="servicio-name">ELECTRICIDAD INDUSTRIAL</div><p class="servicio-desc">Instalaciones eléctricas industriales y comerciales. Tableros, cableado y habilitaciones con profesionales matriculados.</p></div>
-      <div class="servicio-card"><span class="servicio-icon">🔌</span><div class="servicio-num">06</div><div class="servicio-name">CABLEADO ESTRUCTURADO</div><p class="servicio-desc">Infraestructura de red para empresas. CAT6, fibra óptica y sistemas de comunicación integrados.</p></div>
+    <div class="section-tag fade-in">Videovigilancia</div>
+    <h2 class="section-title fade-in">CÁMARAS QUE REGISTRAN<br>TODO LO QUE IMPORTA</h2>
+    <p class="section-sub fade-in">Full HD, infrarrojo, almacenamiento en nube o local. Acceso remoto desde cualquier dispositivo. Instalación profesional con backup eléctrico.</p>
+    <div class="camaras-grid fade-in">
+      <div class="cam-card">
+        <span class="cam-icon">📹</span>
+        <div class="cam-tipo">SEGURIDAD PERIMETRAL</div>
+        <h3 class="cam-name">Cámaras Exteriores</h3>
+        <p class="cam-desc">Bullet/PTZ con visión nocturna 30-50m, IP66, detección de movimiento.</p>
+        <div class="cam-specs">
+          <span class="cam-spec">→ 2MP a 8MP</span>
+          <span class="cam-spec">→ Infrarrojo smart</span>
+          <span class="cam-spec">→ Antigolpes IK10</span>
+        </div>
+      </div>
+      <div class="cam-card">
+        <span class="cam-icon">🏠</span>
+        <div class="cam-tipo">CONTROL INTERNO</div>
+        <h3 class="cam-name">Cámaras Interiores</h3>
+        <p class="cam-desc">Domo/fijas, micrófono integrado, zoom óptico, montaje en techo/pared.</p>
+        <div class="cam-specs">
+          <span class="cam-spec">→ Full HD 1080p</span>
+          <span class="cam-spec">→ Audio bidireccional</span>
+          <span class="cam-spec">→ WDR / antivandálicas</span>
+        </div>
+      </div>
+      <div class="cam-card">
+        <span class="cam-icon">💾</span>
+        <div class="cam-tipo">ALMACENAMIENTO</div>
+        <h3 class="cam-name">Grabación 24/7</h3>
+        <p class="cam-desc">NVR/DVR con discos duros especializados, backup en nube opcional.</p>
+        <div class="cam-specs">
+          <span class="cam-spec">→ 7-90 días de retención</span>
+          <span class="cam-spec">→ Acceso remoto seguro</span>
+          <span class="cam-spec">→ UPS incluido</span>
+        </div>
+      </div>
     </div>
   </div>
 </section>
 
-<!-- MENSAJES CLAVE -->
-<section class="mensajes">
+<!-- ALARMAS -->
+<section class="alarmas">
   <div class="section-inner">
-    <div class="section-tag">Por qué invertir ahora</div>
-    <h2 class="section-title">EL COSTO DE<br>NO ACTUAR</h2>
-    <p class="section-sub">No vendemos tecnología. Vendemos continuidad operativa, cumplimiento normativo y protección real de tu patrimonio.</p>
-    <div class="mensajes-grid fade-in">
-      <div class="mensaje-card">
-        <span class="mensaje-check">✔️</span>
-        <div class="mensaje-text"><strong>Cumplí con normativa y evitá clausuras</strong><span>La inspección municipal puede clausurar tu negocio si no tenés certificación vigente. El costo de la multa supera con creces el de la instalación.</span></div>
+    <div class="section-tag fade-in">Control de accesos y alarmas</div>
+    <h2 class="section-title fade-in">QUIÉN ENTRA, CUÁNDO,<br>Y POR DÓNDE</h2>
+    <p class="section-sub fade-in">Sistemas de acceso biométrico, lectoras RFID, alarmas monitoreadas 24/7. Todo integrado en una sola plataforma.</p>
+    <div class="alarmas-grid fade-in">
+      <div class="alarma-card">
+        <div class="alarma-header">
+          <span class="alarma-icon">🔐</span>
+          <h3 class="alarma-name">Control de Accesos</h3>
+        </div>
+        <p class="alarma-desc">Lectoras de proximidad, huella digital, reconocimiento facial. Registro de ingresos/egresos con reportes automatizados.</p>
+        <div class="alarma-features">
+          <span class="alarma-feature">✓ Hasta 10,000 usuarios</span>
+          <span class="alarma-feature">✓ Horarios personalizables</span>
+          <span class="alarma-feature">✓ Integración con RRHH</span>
+          <span class="alarma-feature">✓ Módulos de expansión</span>
+        </div>
       </div>
-      <div class="mensaje-card">
-        <span class="mensaje-check">✔️</span>
-        <div class="mensaje-text"><strong>Protegé tu operación ante auditorías de ART</strong><span>Las ART y aseguradoras exigen sistemas certificados. Sin esto, tu seguro no cubre el siniestro y quedás expuesto.</span></div>
-      </div>
-      <div class="mensaje-card">
-        <span class="mensaje-check">✔️</span>
-        <div class="mensaje-text"><strong>Asegurá cobertura total de tu seguro</strong><span>Un incendio sin sistema certificado puede invalidar tu póliza. La instalación es la diferencia entre cobrar o perderlo todo.</span></div>
-      </div>
-      <div class="mensaje-card">
-        <span class="mensaje-check">✔️</span>
-        <div class="mensaje-text"><strong>Instalación certificada según IRAM/NFPA</strong><span>Todos nuestros sistemas se instalan y documentan bajo normativa vigente. Listo para cualquier auditoría, en cualquier momento.</span></div>
+      <div class="alarma-card">
+        <div class="alarma-header">
+          <span class="alarma-icon">🚨</span>
+          <h3 class="alarma-name">Alarmas Monitoreadas</h3>
+        </div>
+        <p class="alarma-desc">Sensores de movimiento, contactos magnéticos, botón de pánico. Monitoreo 24/7 con respuesta inmediata.</p>
+        <div class="alarma-features">
+          <span class="alarma-feature">✓ Central receptora profesional</span>
+          <span class="alarma-feature">✓ App móvil en tiempo real</span>
+          <span class="alarma-feature">✓ Backup celular GSM</span>
+          <span class="alarma-feature">✓ Zonas configurables</span>
+        </div>
       </div>
     </div>
   </div>
@@ -459,33 +493,38 @@ footer { padding: 2rem; border-top: 1px solid var(--g3); }
 <!-- PROYECTOS -->
 <section class="proyectos" id="proyectos">
   <div class="section-inner">
-    <div class="section-tag">Experiencia real</div>
-    <h2 class="section-title">PROYECTOS<br>REALIZADOS</h2>
-    <p class="section-sub">Empresas e instituciones de Córdoba que confiaron en Detecta para proteger sus instalaciones.</p>
+    <div class="section-tag fade-in">Casos reales</div>
+    <h2 class="section-title fade-in">LO QUE HACEMOS<br>EN CÓRDOBA</h2>
     <div class="proyectos-grid fade-in">
       <div class="proyecto-card">
-        <div class="proyecto-header"><div class="proyecto-num">01</div><div class="proyecto-tag">Prevención de Incendios</div></div>
-        <div class="proyecto-cliente">SERVICIO PENITENCIARIO DE CÓRDOBA</div>
-        <p class="proyecto-desc">Proyecto y ejecución completa del sistema de detección de incendios desarrollado a medida. Central de incendio, sensores estratégicos y equipamiento homologado según normativa vigente.</p>
-        <div class="proyecto-items"><span>✓ Central de incendio</span><span>✓ Sensores estratégicos</span><span>✓ Equipamiento homologado</span></div>
+        <div class="proyecto-tipo">INDUSTRIA ALIMENTICIA</div>
+        <h3 class="proyecto-title">MOLINOS JUAN SEMINO</h3>
+        <p class="proyecto-empresa">Planta de molienda · 3.500 m²</p>
+        <div class="proyecto-items">
+          <span>✓ Detección automática IRAM</span>
+          <span>✓ 8 cámaras perimetrales</span>
+          <span>✓ Extintores ABC/K certificados</span>
+        </div>
       </div>
       <div class="proyecto-card">
-        <div class="proyecto-header"><div class="proyecto-num">02</div><div class="proyecto-tag">Videovigilancia</div></div>
-        <div class="proyecto-cliente">EDAR · SUPERCEMENTO</div>
-        <p class="proyecto-desc">Puesta en marcha completa del sistema de videovigilancia industrial. Instalación, configuración y calibración de cámaras en todo el perímetro e interior del predio para monitoreo continuo.</p>
-        <div class="proyecto-items"><span>✓ Cobertura perimetral</span><span>✓ Monitoreo continuo</span><span>✓ Calibración profesional</span></div>
+        <div class="proyecto-tipo">LOGÍSTICA</div>
+        <h3 class="proyecto-title">FADEL DEPÓSITO</h3>
+        <p class="proyecto-empresa">Centro de distribución · 2.800 m²</p>
+        <div class="proyecto-items">
+          <span>✓ Rociadores automáticos NFPA</span>
+          <span>✓ 12 cámaras IP 4MP</span>
+          <span>✓ Control de acceso biométrico</span>
+        </div>
       </div>
       <div class="proyecto-card">
-        <div class="proyecto-header"><div class="proyecto-num">03</div><div class="proyecto-tag">Prevención de Incendios</div></div>
-        <div class="proyecto-cliente">MERCADO NORTE</div>
-        <p class="proyecto-desc">Instalación integral de sistema de detección de incendios con diseño personalizado conforme a normativas. Central de control, alarma temprana y señalización completa.</p>
-        <div class="proyecto-items"><span>✓ Diseño personalizado</span><span>✓ Alarma temprana</span><span>✓ Certificación normativa</span></div>
-      </div>
-      <div class="proyecto-card">
-        <div class="proyecto-header"><div class="proyecto-num">04</div><div class="proyecto-tag">Actualización de Sistema</div></div>
-        <div class="proyecto-cliente">MEGATONE</div>
-        <p class="proyecto-desc">Adecuación y actualización de red de incendio existente. Relevamiento técnico, reemplazo de componentes obsoletos y adaptación a normativas vigentes para máxima eficiencia operativa.</p>
-        <div class="proyecto-items"><span>✓ Relevamiento técnico</span><span>✓ Actualización normativa</span><span>✓ Optimización operativa</span></div>
+        <div class="proyecto-tipo">COMERCIO</div>
+        <h3 class="proyecto-title">COMEGA SHOWROOM</h3>
+        <p class="proyecto-empresa">Local comercial · 850 m²</p>
+        <div class="proyecto-items">
+          <span>✓ Relevamiento técnico</span>
+          <span>✓ Actualización normativa</span>
+          <span>✓ Optimización operativa</span>
+        </div>
       </div>
     </div>
   </div>
@@ -494,8 +533,8 @@ footer { padding: 2rem; border-top: 1px solid var(--g3); }
 <!-- POR QUÉ -->
 <section class="porque">
   <div class="section-inner">
-    <div class="section-tag">Por qué elegirnos</div>
-    <h2 class="section-title">SIMPLES.<br>CERTIFICADOS.<br>EN CÓRDOBA.</h2>
+    <div class="section-tag fade-in">Por qué elegirnos</div>
+    <h2 class="section-title fade-in">SIMPLES.<br>CERTIFICADOS.<br>EN CÓRDOBA.</h2>
     <div class="porque-grid fade-in">
       <div class="porque-item"><span class="porque-num">0$</span><div class="porque-label">Relevamiento y diagnóstico técnico sin cargo</div></div>
       <div class="porque-item"><span class="porque-num">1 DÍA</span><div class="porque-label">Tiempo de respuesta a consultas y presupuestos</div></div>
@@ -515,31 +554,55 @@ footer { padding: 2rem; border-top: 1px solid var(--g3); }
       <div class="contacto-info">
         <div class="contacto-info-item">
           <div class="contacto-info-icon">💬</div>
-          <div class="contacto-info-text"><strong>WhatsApp</strong><a href="https://wa.me/5493515503938?text=Hola%2C%20me%20contacto%20desde%20la%20web%20de%20Detecta." target="_blank">+54 9 351 550-3938</a></div>
+          <div class="contacto-info-text">
+            <strong>WhatsApp</strong>
+            <a href="https://wa.me/5493515503938?text=Hola%2C%20me%20contacto%20desde%20la%20web%20de%20Detecta." target="_blank">+54 9 351 550-3938</a>
+          </div>
         </div>
         <div class="contacto-info-item">
           <div class="contacto-info-icon">📧</div>
-          <div class="contacto-info-text"><strong>Email</strong><a href="mailto:detecta.cba@gmail.com">detecta.cba@gmail.com</a></div>
+          <div class="contacto-info-text">
+            <strong>Email</strong>
+            <a href="mailto:contacto@detecta.com.ar">contacto@detecta.com.ar</a>
+          </div>
         </div>
         <div class="contacto-info-item">
           <div class="contacto-info-icon">📍</div>
-          <div class="contacto-info-text"><strong>Zona de cobertura</strong><span>Córdoba Capital y Gran Córdoba</span></div>
+          <div class="contacto-info-text">
+            <strong>Zona de cobertura</strong>
+            <span>Córdoba Capital y Gran Córdoba</span>
+          </div>
         </div>
         <div class="contacto-info-item">
           <div class="contacto-info-icon">📸</div>
-          <div class="contacto-info-text"><strong>Instagram</strong><a href="https://www.instagram.com/detecta.arg" target="_blank">@detecta.arg</a></div>
+          <div class="contacto-info-text">
+            <strong>Instagram</strong>
+            <a href="https://www.instagram.com/detecta.arg" target="_blank">@detecta.arg</a>
+          </div>
         </div>
       </div>
     </div>
     <div class="contacto-form fade-in">
       <div class="form-title">ENVIANOS TU CONSULTA</div>
       <div class="form-sub">Te respondemos en el día</div>
-      <form id="contactoForm" action="https://formspree.io/f/REPLACE_WITH_YOUR_ID" method="POST">
+      <form id="contactoForm" action="https://formspree.io/f/xeojgzbw" method="POST">
         <input type="hidden" name="_subject" value="Consulta desde sección contacto - detecta.com.ar">
-        <div class="form-group"><label>Nombre y empresa</label><input type="text" name="nombre" placeholder="Tu nombre y empresa" required></div>
-        <div class="form-group"><label>Teléfono</label><input type="tel" name="telefono" placeholder="351 000-0000" required></div>
-        <div class="form-group"><label>Email</label><input type="email" name="email" placeholder="tu@email.com"></div>
-        <div class="form-group"><label>Mensaje</label><textarea name="mensaje" placeholder="Contanos el rubro y qué necesitás..."></textarea></div>
+        <div class="form-group">
+          <label>Nombre y empresa</label>
+          <input type="text" name="nombre" placeholder="Tu nombre y empresa" required>
+        </div>
+        <div class="form-group">
+          <label>Teléfono</label>
+          <input type="tel" name="telefono" placeholder="351 000-0000" required>
+        </div>
+        <div class="form-group">
+          <label>Email</label>
+          <input type="email" name="email" placeholder="tu@email.com">
+        </div>
+        <div class="form-group">
+          <label>Mensaje</label>
+          <textarea name="mensaje" placeholder="Contanos el rubro y qué necesitás..."></textarea>
+        </div>
         <button type="submit" class="form-submit">ENVIAR CONSULTA →</button>
       </form>
       <div class="form-success" id="contactoSuccess">✓ ¡Mensaje enviado! Te contactamos en el día.</div>
@@ -553,43 +616,71 @@ footer { padding: 2rem; border-top: 1px solid var(--g3); }
     <div class="footer-logo">DETECTA<span>.</span> SEGURIDAD INTEGRAL</div>
     <div class="footer-right">
       <a href="https://www.instagram.com/detecta.arg" target="_blank" class="footer-ig">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="2" y="2" width="20" height="20" rx="5" ry="5"/><path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/><line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">
+          <rect x="2" y="2" width="20" height="20" rx="5" ry="5"/>
+          <path d="M16 11.37A4 4 0 1 1 12.63 8 4 4 0 0 1 16 11.37z"/>
+          <line x1="17.5" y1="6.5" x2="17.51" y2="6.5"/>
+        </svg>
         @detecta.arg
       </a>
-      <div class="footer-copy">© 2026 Detecta · Córdoba · <a href="mailto:detecta.cba@gmail.com" style="color:inherit;text-decoration:none;">detecta.cba@gmail.com</a></div>
+      <div class="footer-copy">© 2025 Detecta · Córdoba · <a href="mailto:contacto@detecta.com.ar" style="color:inherit;text-decoration:none;">contacto@detecta.com.ar</a></div>
     </div>
   </div>
 </footer>
 
 <!-- WA FLOAT -->
 <a class="wa-float" href="https://wa.me/5493515503938?text=Hola%2C%20me%20contacto%20desde%20la%20web%20de%20Detecta." target="_blank" aria-label="WhatsApp">
-  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg"><path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/></svg>
+  <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+    <path d="M17.472 14.382c-.297-.149-1.758-.867-2.03-.967-.273-.099-.471-.148-.67.15-.197.297-.767.966-.94 1.164-.173.199-.347.223-.644.075-.297-.15-1.255-.463-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.298-.347.446-.52.149-.174.198-.298.298-.497.099-.198.05-.371-.025-.52-.075-.149-.669-1.612-.916-2.207-.242-.579-.487-.5-.669-.51-.173-.008-.371-.01-.57-.01-.198 0-.52.074-.792.372-.272.297-1.04 1.016-1.04 2.479 0 1.462 1.065 2.875 1.213 3.074.149.198 2.096 3.2 5.077 4.487.709.306 1.262.489 1.694.625.712.227 1.36.195 1.871.118.571-.085 1.758-.719 2.006-1.413.248-.694.248-1.289.173-1.413-.074-.124-.272-.198-.57-.347m-5.421 7.403h-.004a9.87 9.87 0 01-5.031-1.378l-.361-.214-3.741.982.998-3.648-.235-.374a9.86 9.86 0 01-1.51-5.26c.001-5.45 4.436-9.884 9.888-9.884 2.64 0 5.122 1.03 6.988 2.898a9.825 9.825 0 012.893 6.994c-.003 5.45-4.437 9.884-9.885 9.884m8.413-18.297A11.815 11.815 0 0012.05 0C5.495 0 .16 5.335.157 11.892c0 2.096.547 4.142 1.588 5.945L.057 24l6.305-1.654a11.882 11.882 0 005.683 1.448h.005c6.554 0 11.89-5.335 11.893-11.893a11.821 11.821 0 00-3.48-8.413z"/>
+  </svg>
 </a>
 
 <script>
+  // INTERSECTION OBSERVER PARA FADE-IN
   const observer = new IntersectionObserver((entries) => {
     entries.forEach(e => { if (e.isIntersecting) e.target.classList.add('visible'); });
   }, { threshold: 0.1 });
   document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
+  // MANEJO DE FORMULARIOS
   async function handleForm(formId, successId) {
     const form = document.getElementById(formId);
     const success = document.getElementById(successId);
     if (!form) return;
+    
     form.addEventListener('submit', async (e) => {
       e.preventDefault();
       const btn = form.querySelector('button[type="submit"]');
+      const originalText = btn.textContent;
       btn.textContent = 'ENVIANDO...';
       btn.disabled = true;
+      
       try {
-        const res = await fetch(form.action, { method: 'POST', body: new FormData(form), headers: { 'Accept': 'application/json' } });
-        if (res.ok) { form.style.display = 'none'; success.style.display = 'block'; }
-        else { btn.textContent = 'ERROR — INTENTÁ DE NUEVO'; btn.disabled = false; }
-      } catch { btn.textContent = 'ERROR — INTENTÁ DE NUEVO'; btn.disabled = false; }
+        const res = await fetch(form.action, { 
+          method: 'POST', 
+          body: new FormData(form), 
+          headers: { 'Accept': 'application/json' } 
+        });
+        
+        if (res.ok) {
+          form.reset();
+          success.style.display = 'block';
+          setTimeout(() => { success.style.display = 'none'; }, 5000);
+        } else {
+          alert('Hubo un error. Por favor, intentá de nuevo o contactanos por WhatsApp.');
+        }
+      } catch (err) {
+        alert('Error de conexión. Por favor, intentá de nuevo.');
+      } finally {
+        btn.textContent = originalText;
+        btn.disabled = false;
+      }
     });
   }
+
   handleForm('heroForm', 'heroSuccess');
   handleForm('contactoForm', 'contactoSuccess');
 </script>
+
 </body>
 </html>
