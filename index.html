@@ -111,6 +111,14 @@
     width: 100%;
   }
 
+  .mobile-only {
+    display: inline;
+  }
+
+  .desktop-only {
+    display: none;
+  }
+
   .section {
     padding: 58px 0;
   }
@@ -616,6 +624,40 @@
     fill: currentColor;
   }
 
+  @media (max-width: 719px) {
+    .topbar-inner {
+      flex-wrap: nowrap;
+      gap: 12px;
+      padding: 10px 0;
+    }
+
+    .brand {
+      flex: 0 1 auto;
+    }
+
+    .brand-mark {
+      width: 132px;
+    }
+
+    .topbar-actions {
+      width: auto;
+      margin-left: auto;
+    }
+
+    .topbar .icon-button {
+      display: none;
+    }
+
+    .topbar .button {
+      width: auto;
+      min-height: 42px;
+      padding: 0 16px;
+      font-size: 0.9rem;
+      white-space: nowrap;
+      box-shadow: 0 10px 20px rgba(12, 119, 189, 0.18);
+    }
+  }
+
   @media (min-width: 720px) {
     .container {
       width: min(1140px, calc(100% - 48px));
@@ -631,6 +673,14 @@
 
     .button {
       width: auto;
+    }
+
+    .mobile-only {
+      display: none;
+    }
+
+    .desktop-only {
+      display: inline;
     }
 
     .hero-grid {
@@ -714,7 +764,10 @@
             <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 6.35A5.65 5.65 0 1 1 6.35 12 5.66 5.66 0 0 1 12 6.35Zm0 1.8A3.85 3.85 0 1 0 15.85 12 3.85 3.85 0 0 0 12 8.15Z"/>
           </svg>
         </a>
-        <a class="button" href="https://wa.me/5493515176501" target="_blank" rel="noopener noreferrer">Solicitar asesoramiento por WhatsApp</a>
+        <a class="button" href="https://wa.me/5493515176501" target="_blank" rel="noopener noreferrer" aria-label="Solicitar asesoramiento por WhatsApp">
+          <span class="mobile-only">WhatsApp</span>
+          <span class="desktop-only">Solicitar asesoramiento por WhatsApp</span>
+        </a>
       </div>
     </div>
   </header>
