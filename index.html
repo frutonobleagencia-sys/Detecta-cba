@@ -388,6 +388,50 @@
     color: var(--muted);
   }
 
+  .section-lead {
+    margin: 0;
+    max-width: 40ch;
+    font-size: 1.12rem;
+    font-weight: 800;
+    color: var(--accent-strong);
+  }
+
+  .services-grid {
+    display: grid;
+    gap: 18px;
+  }
+
+  .service-feature {
+    overflow: hidden;
+    border: 1px solid var(--line);
+    border-radius: 28px;
+    background: linear-gradient(180deg, #ffffff 0%, #f2f8fd 100%);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .service-media {
+    aspect-ratio: 16 / 10;
+    overflow: hidden;
+    background: var(--surface-soft);
+  }
+
+  .service-media img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+  }
+
+  .service-copy {
+    display: grid;
+    gap: 10px;
+    padding: 22px;
+  }
+
+  .service-copy h3 {
+    margin: 0;
+    font-size: 1.22rem;
+  }
+
   .projects-grid {
     display: grid;
     gap: 18px;
@@ -611,6 +655,10 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .services-grid {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .social-grid {
       grid-template-columns: 0.9fr 1.1fr;
       align-items: stretch;
@@ -761,42 +809,32 @@
       <div class="container">
         <div class="section-header">
           <span class="section-kicker">Servicios</span>
-          <h2>Lo que podemos resolver para tu empresa o edificio.</h2>
-          <p>Te explicamos cada servicio de forma simple para que sepas rapido si te podemos ayudar.</p>
+          <h2>Prevenci&oacute;n de incendios para empresas y edificios</h2>
+          <p class="section-lead">Proteg&eacute; tu espacio con sistemas que detectan y act&uacute;an a tiempo</p>
+          <p>Instalamos sistemas de detecci&oacute;n temprana y respuesta inmediata para prevenir incendios y reducir riesgos. Soluciones adaptadas a cada espacio y bajo normativa vigente.</p>
         </div>
 
-        <div class="cards">
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <circle cx="24" cy="22" r="10" stroke="currentColor" stroke-width="2.5"/>
-                <path d="M24 32v6M18 10l6-4 6 4" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-              </svg>
+        <div class="services-grid">
+          <article class="service-feature">
+            <div class="service-media">
+              <img src="assets/images/foto-incendio-1.png" alt="Pulsador manual de incendio" width="1280" height="963" loading="lazy">
             </div>
-            <h3>Instalacion de detectores de humo</h3>
-            <p>Colocamos sistemas para detectar humo y actuar a tiempo ante una emergencia.</p>
+            <div class="service-copy">
+              <span class="project-label">Bloque 1</span>
+              <h3>Planes y capacitaci&oacute;n</h3>
+              <p>Capacitamos a tu equipo para actuar correctamente ante incendios y evacuaciones.</p>
+            </div>
           </article>
 
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M24 8c6 5 9 10 9 15a9 9 0 1 1-18 0c0-5 3-10 9-15z" stroke="currentColor" stroke-width="2.5"/>
-                <path d="M24 20c2 2 3 4 3 6a3 3 0 1 1-6 0c0-2 1-4 3-6z" stroke="currentColor" stroke-width="2.5"/>
-              </svg>
+          <article class="service-feature">
+            <div class="service-media">
+              <img src="assets/images/foto-incendio-2.png" alt="Detector de humo instalado en techo" width="490" height="675" loading="lazy">
             </div>
-            <h3>Sistemas contra incendios</h3>
-            <p>Instalamos soluciones para proteger espacios de trabajo, edificios y areas comunes.</p>
-          </article>
-
-          <article class="card">
-            <div class="service-icon" aria-hidden="true">
-              <svg viewBox="0 0 48 48" width="26" height="26" fill="none" xmlns="http://www.w3.org/2000/svg">
-                <path d="M14 33l6-6 4 4 10-10" stroke="currentColor" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
-                <path d="M14 15h20v20H14z" stroke="currentColor" stroke-width="2.5" stroke-linejoin="round"/>
-              </svg>
+            <div class="service-copy">
+              <span class="project-label">Bloque 2</span>
+              <h3>Detecci&oacute;n y respuesta inmediata</h3>
+              <p>Instalamos sistemas que detectan incendios en segundos y minimizan da&ntilde;os.</p>
             </div>
-            <h3>Mantenimiento</h3>
-            <p>Revisamos y actualizamos sistemas existentes para que sigan funcionando correctamente.</p>
           </article>
         </div>
       </div>
