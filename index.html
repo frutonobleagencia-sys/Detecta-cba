@@ -7,20 +7,24 @@
 <meta name="keywords" content="deteccion de incendios cordoba, sistemas contra incendios cordoba, detectores de humo cordoba, mantenimiento contra incendios">
 <meta name="author" content="Detecta Seguridad Integral">
 <title>Sistemas de deteccion de incendios en Cordoba | Detecta</title>
+<link rel="icon" type="image/svg+xml" href="assets/brand/favicon-detecta.svg">
 <style>
   :root {
-    --bg: #f4f1ea;
-    --surface: #fffdf9;
-    --surface-strong: #ece6da;
-    --text: #1f2933;
-    --muted: #5d6b75;
-    --line: #d4ccbf;
-    --accent: #b6422e;
-    --accent-dark: #8f3022;
-    --accent-soft: #f6e3dd;
-    --success: #1f6a43;
-    --shadow: 0 18px 45px rgba(31, 41, 51, 0.08);
-    --radius: 24px;
+    --bg: #f4f9fd;
+    --surface: #ffffff;
+    --surface-soft: #eef6fc;
+    --surface-strong: #dcecf8;
+    --text: #163149;
+    --muted: #5f7488;
+    --line: #d5e5f1;
+    --accent: #0c77bd;
+    --accent-dark: #095a90;
+    --accent-soft: #e7f3fb;
+    --accent-strong: #07395a;
+    --shadow: 0 20px 48px rgba(12, 119, 189, 0.11);
+    --shadow-soft: 0 14px 32px rgba(18, 49, 73, 0.08);
+    --radius: 28px;
+    --whatsapp: #25d366;
   }
 
   * {
@@ -36,8 +40,8 @@
     font-family: "Trebuchet MS", "Segoe UI", sans-serif;
     color: var(--text);
     background:
-      radial-gradient(circle at top left, rgba(182, 66, 46, 0.1), transparent 34%),
-      linear-gradient(180deg, #f8f5ef 0%, #f4f1ea 45%, #efe9de 100%);
+      radial-gradient(circle at top left, rgba(12, 119, 189, 0.16), transparent 34%),
+      linear-gradient(180deg, #f8fbfe 0%, #f4f9fd 40%, #edf5fb 100%);
     line-height: 1.5;
   }
 
@@ -51,50 +55,45 @@
   }
 
   .container {
-    width: min(1120px, calc(100% - 32px));
+    width: min(1140px, calc(100% - 32px));
     margin: 0 auto;
   }
 
   .topbar {
     position: sticky;
     top: 0;
-    z-index: 20;
-    backdrop-filter: blur(14px);
-    background: rgba(248, 245, 239, 0.94);
-    border-bottom: 1px solid rgba(212, 204, 191, 0.8);
+    z-index: 30;
+    border-bottom: 1px solid rgba(213, 229, 241, 0.95);
+    background: rgba(248, 251, 254, 0.94);
+    backdrop-filter: blur(12px);
   }
 
   .topbar-inner {
     display: flex;
     align-items: center;
     justify-content: space-between;
-    gap: 16px;
+    gap: 14px;
     flex-wrap: wrap;
     padding: 14px 0;
   }
 
   .brand {
     display: inline-flex;
-    flex-direction: column;
-    text-decoration: none;
+    align-items: center;
     flex: 1 1 220px;
+    min-width: 0;
+    text-decoration: none;
   }
 
-  .brand-name {
-    font-size: 1.05rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
-  }
-
-  .brand-sub {
-    font-size: 0.76rem;
-    color: var(--muted);
+  .brand-mark {
+    width: 176px;
+    max-width: 100%;
+    height: auto;
   }
 
   .nav-links {
     display: none;
-    gap: 20px;
+    gap: 22px;
     align-items: center;
   }
 
@@ -102,20 +101,28 @@
     text-decoration: none;
     color: var(--muted);
     font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .topbar-actions {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    width: 100%;
   }
 
   .section {
-    padding: 56px 0;
+    padding: 58px 0;
   }
 
   .hero {
-    padding: 44px 0 28px;
+    padding: 36px 0 26px;
   }
 
   .hero-card {
-    background: rgba(255, 253, 249, 0.92);
-    border: 1px solid rgba(212, 204, 191, 0.85);
-    border-radius: calc(var(--radius) + 4px);
+    background: rgba(255, 255, 255, 0.88);
+    border: 1px solid rgba(213, 229, 241, 0.9);
+    border-radius: 32px;
     box-shadow: var(--shadow);
     overflow: hidden;
   }
@@ -123,123 +130,73 @@
   .hero-grid {
     display: grid;
     gap: 24px;
-    padding: 28px 22px;
+    padding: 24px 20px;
   }
 
-  .eyebrow {
+  .eyebrow,
+  .project-label,
+  .section-kicker,
+  .social-pill {
     display: inline-flex;
     align-items: center;
-    gap: 8px;
-    margin-bottom: 16px;
+    width: fit-content;
     padding: 8px 12px;
     border-radius: 999px;
     background: var(--accent-soft);
     color: var(--accent-dark);
     font-size: 0.78rem;
-    font-weight: 700;
-    letter-spacing: 0.04em;
+    font-weight: 800;
+    letter-spacing: 0.05em;
     text-transform: uppercase;
+  }
+
+  .hero-copy {
+    display: grid;
+    gap: 18px;
+    align-content: center;
   }
 
   .hero h1,
   .section h2,
   .cta h2 {
-    margin: 0 0 14px;
-    line-height: 1.05;
+    margin: 0;
+    line-height: 1.02;
     letter-spacing: -0.03em;
   }
 
   .hero h1 {
-    font-size: clamp(2.35rem, 8vw, 4.65rem);
+    font-size: clamp(2.45rem, 8vw, 4.7rem);
     max-width: 11ch;
   }
 
-  .hero p {
-    margin: 0;
-  }
-
-  .hero-copy {
-    display: grid;
-    gap: 20px;
-  }
-
   .hero-subtitle {
+    margin: 0;
+    max-width: 38ch;
     font-size: 1.08rem;
     color: var(--muted);
-    max-width: 40ch;
   }
 
   .hero-support {
-    font-size: 0.98rem;
+    margin: 0;
+    font-size: 0.97rem;
+    font-weight: 800;
+    color: var(--accent-strong);
+  }
+
+  .hero-points {
+    display: grid;
+    gap: 10px;
     color: var(--text);
-    font-weight: 600;
-  }
-
-  .hero-note {
-    display: grid;
-    gap: 10px;
-    padding: 18px;
-    border: 1px solid var(--line);
-    border-radius: 20px;
-    background: linear-gradient(180deg, #fffdfa 0%, #f8f1e8 100%);
-  }
-
-  .hero-note strong {
-    font-size: 0.95rem;
-    text-transform: uppercase;
-    letter-spacing: 0.06em;
-    color: var(--accent-dark);
-  }
-
-  .hero-note p {
-    color: var(--muted);
-    font-size: 0.95rem;
-  }
-
-  .hero-trust {
-    display: grid;
-    gap: 10px;
-    color: var(--success);
-    font-size: 0.96rem;
+    font-size: 0.97rem;
     font-weight: 700;
   }
 
-  .button,
-  .button-secondary {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    min-height: 52px;
-    padding: 0 24px;
-    border-radius: 999px;
-    font-size: 0.98rem;
+  .hero-points span::before,
+  .trust-line::before {
+    content: "\2713";
+    margin-right: 10px;
+    color: var(--accent);
     font-weight: 800;
-    text-decoration: none;
-    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
-  }
-
-  .button {
-    background: var(--accent);
-    color: #fff;
-    box-shadow: 0 12px 24px rgba(182, 66, 46, 0.24);
-    width: 100%;
-  }
-
-  .button:hover {
-    background: var(--accent-dark);
-    transform: translateY(-1px);
-  }
-
-  .button-secondary {
-    border: 1px solid var(--line);
-    background: rgba(255, 255, 255, 0.55);
-    color: var(--text);
-  }
-
-  .button-secondary:hover {
-    border-color: var(--accent);
-    color: var(--accent-dark);
-    transform: translateY(-1px);
   }
 
   .hero-actions,
@@ -248,87 +205,133 @@
     gap: 12px;
   }
 
+  .button,
+  .button-secondary,
+  .icon-button {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 52px;
+    padding: 0 22px;
+    border-radius: 999px;
+    text-decoration: none;
+    font-size: 0.97rem;
+    font-weight: 800;
+    transition: transform 0.2s ease, background-color 0.2s ease, color 0.2s ease, border-color 0.2s ease;
+  }
+
+  .button {
+    width: 100%;
+    background: var(--accent);
+    color: #fff;
+    box-shadow: 0 14px 28px rgba(12, 119, 189, 0.22);
+  }
+
+  .button:hover,
+  .icon-button:hover,
+  .button-secondary:hover,
+  .wa-float:hover {
+    transform: translateY(-1px);
+  }
+
+  .button:hover,
+  .icon-button:hover {
+    background: var(--accent-dark);
+  }
+
+  .button-secondary {
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--text);
+  }
+
+  .button-secondary:hover {
+    border-color: var(--accent);
+    color: var(--accent-dark);
+  }
+
+  .icon-button {
+    min-width: 52px;
+    padding: 0 16px;
+    border: 1px solid var(--line);
+    background: #fff;
+    color: var(--accent-dark);
+  }
+
+  .icon-button svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
   .hero-visual {
-    min-height: 260px;
-    border-radius: 24px;
-    border: 1px solid rgba(212, 204, 191, 0.9);
-    background:
-      linear-gradient(145deg, rgba(182, 66, 46, 0.12), transparent 55%),
-      linear-gradient(180deg, #362d2a 0%, #1f2328 100%);
-    padding: 22px;
-    display: grid;
-    align-content: end;
-    color: #f9f4ee;
     position: relative;
+    min-height: 320px;
     overflow: hidden;
+    border: 1px solid rgba(213, 229, 241, 0.95);
+    border-radius: 28px;
+    box-shadow: var(--shadow-soft);
+    background: #0b2538;
   }
 
-  .hero-visual::before,
-  .hero-visual::after {
-    content: "";
+  .hero-photo {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    min-height: 320px;
+  }
+
+  .hero-overlay {
     position: absolute;
-    border-radius: 50%;
-    background: rgba(255, 255, 255, 0.08);
-  }
-
-  .hero-visual::before {
-    width: 180px;
-    height: 180px;
-    right: -36px;
-    top: -40px;
-  }
-
-  .hero-visual::after {
-    width: 124px;
-    height: 124px;
-    left: -24px;
-    bottom: -30px;
-  }
-
-  .visual-card {
-    position: relative;
-    z-index: 1;
-    display: grid;
-    gap: 14px;
-    padding: 20px;
-    border-radius: 22px;
-    background: rgba(255, 255, 255, 0.08);
-    border: 1px solid rgba(255, 255, 255, 0.12);
-  }
-
-  .visual-card strong {
-    font-size: 1.15rem;
-  }
-
-  .visual-card p {
-    color: rgba(249, 244, 238, 0.82);
-    font-size: 0.95rem;
-  }
-
-  .visual-list {
+    left: 18px;
+    right: 18px;
+    bottom: 18px;
     display: grid;
     gap: 10px;
-    font-size: 0.92rem;
+    padding: 18px;
+    border-radius: 22px;
+    background: linear-gradient(180deg, rgba(8, 38, 58, 0.18) 0%, rgba(8, 38, 58, 0.8) 100%);
+    color: #fff;
   }
 
-  .visual-list span::before {
-    content: "\2022";
-    color: #ffb8ab;
-    margin-right: 8px;
+  .hero-overlay strong {
+    font-size: 1.05rem;
+  }
+
+  .hero-overlay p {
+    margin: 0;
+    color: rgba(255, 255, 255, 0.82);
+    font-size: 0.94rem;
+  }
+
+  .hero-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    margin-top: 6px;
+    color: var(--muted);
+    font-size: 0.95rem;
+    font-weight: 700;
+  }
+
+  .hero-social svg,
+  .social-link svg,
+  .footer-social svg {
+    width: 20px;
+    height: 20px;
+    fill: currentColor;
+  }
+
+  .hero-social a,
+  .social-link {
+    color: var(--accent-dark);
+    text-decoration: none;
   }
 
   .section-header {
     display: grid;
     gap: 12px;
     margin-bottom: 28px;
-  }
-
-  .section-kicker {
-    color: var(--accent-dark);
-    font-size: 0.83rem;
-    font-weight: 800;
-    letter-spacing: 0.08em;
-    text-transform: uppercase;
   }
 
   .section h2,
@@ -339,6 +342,8 @@
   .section-header p,
   .cta p,
   .footer-copy {
+    margin: 0;
+    max-width: 52ch;
     color: var(--muted);
     font-size: 1rem;
   }
@@ -349,32 +354,36 @@
   }
 
   .card {
-    background: rgba(255, 253, 249, 0.9);
+    background: rgba(255, 255, 255, 0.9);
     border: 1px solid var(--line);
     border-radius: var(--radius);
     padding: 22px;
-    box-shadow: var(--shadow);
+    box-shadow: var(--shadow-soft);
   }
 
   .benefit-icon,
   .service-icon {
-    width: 48px;
-    height: 48px;
-    border-radius: 16px;
     display: inline-flex;
     align-items: center;
     justify-content: center;
+    width: 48px;
+    height: 48px;
     margin-bottom: 16px;
+    border-radius: 16px;
     background: var(--accent-soft);
     color: var(--accent-dark);
   }
 
-  .card h3 {
+  .card h3,
+  .project-body h3,
+  .social-card h3 {
     margin: 0 0 10px;
-    font-size: 1.2rem;
+    font-size: 1.22rem;
   }
 
-  .card p {
+  .card p,
+  .project-body p,
+  .social-card p {
     margin: 0;
     color: var(--muted);
   }
@@ -385,118 +394,176 @@
   }
 
   .project-card {
-    background: var(--surface);
+    overflow: hidden;
     border: 1px solid var(--line);
     border-radius: 28px;
-    overflow: hidden;
-    box-shadow: var(--shadow);
+    background: var(--surface);
+    box-shadow: var(--shadow-soft);
   }
 
   .project-image {
     aspect-ratio: 16 / 10;
-    display: grid;
-    place-items: center;
-    background:
-      linear-gradient(180deg, rgba(182, 66, 46, 0.12), rgba(31, 106, 67, 0.04)),
-      linear-gradient(135deg, #f6ede2 0%, #e8dfd1 100%);
-    border-bottom: 1px solid var(--line);
+    overflow: hidden;
+    background: #e3eef7;
   }
 
-  .project-image svg {
+  .project-image img {
     width: 100%;
     height: 100%;
+    object-fit: cover;
   }
 
   .project-body {
-    padding: 20px;
     display: grid;
     gap: 10px;
+    padding: 20px;
   }
 
-  .project-label {
-    display: inline-flex;
-    align-items: center;
-    width: fit-content;
-    padding: 6px 10px;
+  .social {
+    padding-top: 8px;
+  }
+
+  .social-grid {
+    display: grid;
+    gap: 18px;
+  }
+
+  .social-card {
+    background: linear-gradient(135deg, #ffffff 0%, #f0f7fd 100%);
+    border: 1px solid var(--line);
+    border-radius: 30px;
+    padding: 24px;
+    box-shadow: var(--shadow-soft);
+  }
+
+  .social-card p {
+    margin-bottom: 18px;
+  }
+
+  .social-preview {
+    display: grid;
+    gap: 14px;
+  }
+
+  .social-shot {
+    position: relative;
+    overflow: hidden;
+    border-radius: 26px;
+    border: 1px solid var(--line);
+    background: var(--surface);
+    box-shadow: var(--shadow-soft);
+  }
+
+  .social-shot img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    aspect-ratio: 16 / 10;
+  }
+
+  .social-shot span {
+    position: absolute;
+    left: 14px;
+    bottom: 14px;
+    padding: 7px 11px;
     border-radius: 999px;
-    background: var(--accent-soft);
-    color: var(--accent-dark);
-    font-size: 0.75rem;
+    background: rgba(7, 57, 90, 0.82);
+    color: #fff;
+    font-size: 0.82rem;
     font-weight: 800;
-    letter-spacing: 0.05em;
-    text-transform: uppercase;
-  }
-
-  .project-body h3 {
-    margin: 0;
-    font-size: 1.16rem;
-  }
-
-  .project-body p {
-    margin: 0;
-    color: var(--muted);
+    letter-spacing: 0.03em;
   }
 
   .cta {
-    padding: 16px 0 72px;
+    padding: 18px 0 72px;
   }
 
   .cta-box {
-    background: linear-gradient(135deg, #2f2623 0%, #171a1f 100%);
-    border-radius: 30px;
+    position: relative;
+    overflow: hidden;
+    border-radius: 34px;
     padding: 30px 22px;
-    color: #fff9f4;
-    box-shadow: 0 20px 44px rgba(23, 26, 31, 0.24);
+    background: linear-gradient(135deg, #0c77bd 0%, #07395a 100%);
+    color: #fff;
+    box-shadow: 0 22px 48px rgba(7, 57, 90, 0.24);
+  }
+
+  .cta-box::after {
+    content: "";
+    position: absolute;
+    width: 220px;
+    height: 220px;
+    top: -80px;
+    right: -60px;
+    border-radius: 50%;
+    background: rgba(255, 255, 255, 0.08);
+  }
+
+  .cta-box > * {
+    position: relative;
+    z-index: 1;
   }
 
   .cta-box p {
-    color: rgba(255, 249, 244, 0.76);
-    max-width: 42ch;
+    color: rgba(255, 255, 255, 0.86);
   }
 
   .cta-trust {
     margin-top: 18px;
-    color: #f5cfc6;
-    font-weight: 700;
+    color: #d7efff;
     font-size: 0.95rem;
+    font-weight: 800;
+  }
+
+  .cta-trust .trust-line {
+    display: block;
   }
 
   .footer {
-    padding: 0 0 88px;
+    padding: 0 0 92px;
   }
 
   .footer-inner {
     display: flex;
     flex-direction: column;
-    gap: 10px;
-    padding-bottom: 10px;
+    gap: 16px;
+    padding-bottom: 8px;
   }
 
   .footer-brand {
-    font-size: 1rem;
+    width: 150px;
+    height: auto;
+  }
+
+  .footer-meta {
+    display: grid;
+    gap: 8px;
+  }
+
+  .footer-social {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    width: fit-content;
+    color: var(--accent-dark);
+    text-decoration: none;
     font-weight: 800;
-    text-transform: uppercase;
-    letter-spacing: 0.08em;
   }
 
   .wa-float {
     position: fixed;
     right: 18px;
     bottom: 18px;
-    z-index: 25;
-    width: 58px;
-    height: 58px;
-    border-radius: 50%;
+    z-index: 40;
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    background: #25d366;
+    width: 58px;
+    height: 58px;
+    border-radius: 50%;
+    background: var(--whatsapp);
     color: #fff;
-    box-shadow: 0 14px 28px rgba(37, 211, 102, 0.3);
-  }
-
-  .wa-float:hover {
-    transform: translateY(-2px);
+    box-shadow: 0 14px 28px rgba(37, 211, 102, 0.32);
   }
 
   .wa-float svg {
@@ -507,15 +574,15 @@
 
   @media (min-width: 720px) {
     .container {
-      width: min(1120px, calc(100% - 48px));
+      width: min(1140px, calc(100% - 48px));
     }
 
     .nav-links {
       display: flex;
     }
 
-    .topbar-inner {
-      flex-wrap: nowrap;
+    .topbar-actions {
+      width: auto;
     }
 
     .button {
@@ -523,10 +590,10 @@
     }
 
     .hero-grid {
-      grid-template-columns: 1.1fr 0.9fr;
-      gap: 28px;
-      padding: 40px;
+      grid-template-columns: 1.05fr 0.95fr;
       align-items: center;
+      gap: 30px;
+      padding: 42px;
     }
 
     .hero-actions,
@@ -544,8 +611,17 @@
       grid-template-columns: repeat(2, minmax(0, 1fr));
     }
 
+    .social-grid {
+      grid-template-columns: 0.9fr 1.1fr;
+      align-items: stretch;
+    }
+
+    .social-preview {
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+
     .cta-box {
-      padding: 42px;
+      padding: 44px;
     }
 
     .footer {
@@ -566,6 +642,7 @@
 
     .button,
     .button-secondary,
+    .icon-button,
     .wa-float {
       transition: none;
     }
@@ -575,16 +652,22 @@
 <body>
   <header class="topbar">
     <div class="container topbar-inner">
-      <a class="brand" href="#inicio" aria-label="Detecta">
-        <span class="brand-name">Detecta</span>
-        <span class="brand-sub">Sistemas de deteccion de incendios en Cordoba</span>
+      <a class="brand" href="#inicio" aria-label="Detecta Seguridad Integral">
+        <img class="brand-mark" src="assets/brand/logo-detecta.svg" alt="Detecta Seguridad Integral">
       </a>
       <nav class="nav-links" aria-label="Navegacion principal">
         <a href="#beneficios">Beneficios</a>
         <a href="#servicios">Servicios</a>
         <a href="#proyectos">Proyectos</a>
       </nav>
-      <a class="button" href="https://wa.me/5493515176501" target="_blank" rel="noopener noreferrer">Solicitar asesoramiento por WhatsApp</a>
+      <div class="topbar-actions">
+        <a class="icon-button" href="https://www.instagram.com/detecta.arg/" target="_blank" rel="noopener noreferrer" aria-label="Instagram de Detecta">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 6.35A5.65 5.65 0 1 1 6.35 12 5.66 5.66 0 0 1 12 6.35Zm0 1.8A3.85 3.85 0 1 0 15.85 12 3.85 3.85 0 0 0 12 8.15Z"/>
+          </svg>
+        </a>
+        <a class="button" href="https://wa.me/5493515176501" target="_blank" rel="noopener noreferrer">Solicitar asesoramiento por WhatsApp</a>
+      </div>
     </div>
   </header>
 
@@ -602,22 +685,24 @@
                 <a class="button-secondary" href="#proyectos">Ver proyectos realizados</a>
               </div>
               <p class="hero-support">&#10003; Asesoramiento sin cargo | &#10003; Instalacion profesional | &#10003; Servicio en Cordoba Capital</p>
-              <div class="hero-trust" aria-label="Puntos de confianza">
-                <span>&#10003; Respuesta directa por WhatsApp</span>
-                <span>&#10003; Soluciones para empresas, edificios y consorcios</span>
-                <span>&#10003; Atencion local en Cordoba Capital</span>
+              <div class="hero-points" aria-label="Puntos de confianza">
+                <span>Respuesta directa por WhatsApp</span>
+                <span>Soluciones para empresas, edificios y consorcios</span>
+                <span>Atencion local en Cordoba Capital</span>
+              </div>
+              <div class="hero-social">
+                <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                  <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 6.35A5.65 5.65 0 1 1 6.35 12 5.66 5.66 0 0 1 12 6.35Zm0 1.8A3.85 3.85 0 1 0 15.85 12 3.85 3.85 0 0 0 12 8.15Z"/>
+                </svg>
+                <span>Trabajos y avances en <a href="https://www.instagram.com/detecta.arg/" target="_blank" rel="noopener noreferrer">@detecta.arg</a></span>
               </div>
             </div>
 
-            <aside class="hero-visual" aria-label="Resumen de servicio">
-              <div class="visual-card">
-                <strong>Te ayudamos a resolverlo rapido.</strong>
-                <p>Te orientamos segun el tipo de edificio, la instalacion necesaria y el mantenimiento.</p>
-                <div class="visual-list">
-                  <span>Instalacion de detectores de humo</span>
-                  <span>Sistemas contra incendios</span>
-                  <span>Mantenimiento preventivo</span>
-                </div>
+            <aside class="hero-visual" aria-label="Instalacion profesional Detecta">
+              <img class="hero-photo" src="assets/images/recurso-4.png" alt="Tecnico realizando instalacion profesional" width="1280" height="719" fetchpriority="high">
+              <div class="hero-overlay">
+                <strong>Instalacion y mantenimiento con presencia local.</strong>
+                <p>Te ayudamos a resolver que necesitas y como avanzar de forma simple.</p>
               </div>
             </aside>
           </div>
@@ -629,8 +714,8 @@
       <div class="container">
         <div class="section-header">
           <span class="section-kicker">Beneficios</span>
-          <h2>Una propuesta clara para avanzar sin vueltas.</h2>
-          <p>Mostramos lo esencial para que puedas decidir rapido y contactarnos sin perder tiempo.</p>
+          <h2>Una propuesta clara para avanzar rapido.</h2>
+          <p>Mostramos lo esencial para que entiendas que hacemos, donde trabajamos y como contactarnos sin vueltas.</p>
         </div>
 
         <div class="cards">
@@ -722,20 +807,13 @@
         <div class="section-header">
           <span class="section-kicker">Confianza</span>
           <h2>Empresas que confian en nosotros</h2>
-          <p>Algunos proyectos resumidos para reforzar confianza sin cargar la pagina con texto innecesario.</p>
+          <p>Mostramos trabajos reales para reforzar confianza rapido y dejar clara la experiencia en Cordoba.</p>
         </div>
 
         <div class="projects-grid">
           <article class="project-card">
-            <div class="project-image" aria-hidden="true">
-              <svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img">
-                <rect width="640" height="400" fill="#efe6d8"/>
-                <rect x="102" y="84" width="436" height="236" rx="18" fill="#2d3640"/>
-                <rect x="138" y="120" width="112" height="164" rx="10" fill="#d9c8b2"/>
-                <rect x="270" y="120" width="112" height="164" rx="10" fill="#b6422e"/>
-                <rect x="402" y="120" width="100" height="164" rx="10" fill="#d9c8b2"/>
-                <path d="M320 170c20 18 31 36 31 55a31 31 0 1 1-62 0c0-19 11-37 31-55z" fill="#f8f5ef"/>
-              </svg>
+            <div class="project-image">
+              <img src="assets/projects/servicio-penitenciario-cordoba.jpg" alt="Servicio Penitenciario de Cordoba" width="879" height="542" loading="lazy">
             </div>
             <div class="project-body">
               <span class="project-label">Institucional</span>
@@ -745,16 +823,8 @@
           </article>
 
           <article class="project-card">
-            <div class="project-image" aria-hidden="true">
-              <svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img">
-                <rect width="640" height="400" fill="#efe6d8"/>
-                <rect x="82" y="90" width="476" height="220" rx="18" fill="#253038"/>
-                <circle cx="208" cy="200" r="54" fill="#b6422e"/>
-                <circle cx="208" cy="200" r="26" fill="#f8f5ef"/>
-                <rect x="306" y="140" width="182" height="20" rx="10" fill="#cbbda9"/>
-                <rect x="306" y="184" width="150" height="20" rx="10" fill="#cbbda9"/>
-                <rect x="306" y="228" width="118" height="20" rx="10" fill="#cbbda9"/>
-              </svg>
+            <div class="project-image">
+              <img src="assets/projects/edar-supercemento.jpg" alt="EDAR Super Cemento" width="1280" height="719" loading="lazy">
             </div>
             <div class="project-body">
               <span class="project-label">Industria</span>
@@ -764,15 +834,8 @@
           </article>
 
           <article class="project-card">
-            <div class="project-image" aria-hidden="true">
-              <svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img">
-                <rect width="640" height="400" fill="#efe6d8"/>
-                <rect x="76" y="118" width="488" height="178" rx="16" fill="#2e373f"/>
-                <rect x="112" y="94" width="140" height="202" rx="16" fill="#d7c7b3"/>
-                <rect x="274" y="94" width="106" height="202" rx="16" fill="#c14f3b"/>
-                <rect x="400" y="94" width="128" height="202" rx="16" fill="#d7c7b3"/>
-                <path d="M326 152c16 14 26 29 26 44a26 26 0 1 1-52 0c0-15 10-30 26-44z" fill="#fff7f1"/>
-              </svg>
+            <div class="project-image">
+              <img src="assets/projects/mercado-norte.jpg" alt="Mercado Norte" width="1280" height="717" loading="lazy">
             </div>
             <div class="project-body">
               <span class="project-label">Comercial</span>
@@ -782,16 +845,8 @@
           </article>
 
           <article class="project-card">
-            <div class="project-image" aria-hidden="true">
-              <svg viewBox="0 0 640 400" xmlns="http://www.w3.org/2000/svg" role="img">
-                <rect width="640" height="400" fill="#efe6d8"/>
-                <rect x="94" y="88" width="452" height="224" rx="18" fill="#263139"/>
-                <rect x="132" y="126" width="376" height="148" rx="14" fill="#f8f5ef"/>
-                <rect x="160" y="154" width="170" height="26" rx="13" fill="#b6422e"/>
-                <rect x="160" y="202" width="216" height="20" rx="10" fill="#d8cab7"/>
-                <circle cx="448" cy="200" r="42" fill="#1f6a43"/>
-                <path d="M448 180v22M437 191h22" stroke="#f8f5ef" stroke-width="10" stroke-linecap="round"/>
-              </svg>
+            <div class="project-image">
+              <img src="assets/projects/megatone.jpg" alt="Megatone" width="1200" height="766" loading="lazy">
             </div>
             <div class="project-body">
               <span class="project-label">Retail</span>
@@ -799,6 +854,35 @@
               <p>Actualizacion de sistema contra incendios.</p>
             </div>
           </article>
+        </div>
+      </div>
+    </section>
+
+    <section class="section social" id="instagram">
+      <div class="container">
+        <div class="social-grid">
+          <div class="social-card">
+            <span class="social-pill">Instagram</span>
+            <h3>Tambien mostramos trabajos y avances en redes.</h3>
+            <p>Si queres sumar otra referencia antes de escribirnos, podes ver contenido de Detecta en Instagram. Lo dejamos como apoyo de confianza, sin distraer del objetivo principal que es WhatsApp.</p>
+            <a class="social-link button-secondary" href="https://www.instagram.com/detecta.arg/" target="_blank" rel="noopener noreferrer">
+              <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+                <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 6.35A5.65 5.65 0 1 1 6.35 12 5.66 5.66 0 0 1 12 6.35Zm0 1.8A3.85 3.85 0 1 0 15.85 12 3.85 3.85 0 0 0 12 8.15Z"/>
+              </svg>
+              Ver @detecta.arg
+            </a>
+          </div>
+
+          <div class="social-preview" aria-label="Vista previa de trabajos">
+            <a class="social-shot" href="https://www.instagram.com/detecta.arg/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/recurso-3.png" alt="Tareas de medicion y revision tecnica" width="1280" height="719" loading="lazy">
+              <span>Revision y medicion</span>
+            </a>
+            <a class="social-shot" href="https://www.instagram.com/detecta.arg/" target="_blank" rel="noopener noreferrer">
+              <img src="assets/images/recurso-4.png" alt="Trabajos de instalacion profesional" width="1280" height="719" loading="lazy">
+              <span>Instalacion profesional</span>
+            </a>
+          </div>
         </div>
       </div>
     </section>
@@ -811,7 +895,11 @@
           <div class="cta-actions">
             <a class="button" href="https://wa.me/5493515176501" target="_blank" rel="noopener noreferrer">Solicitar asesoramiento por WhatsApp</a>
           </div>
-          <div class="cta-trust">&#10003; Asesoramiento sin cargo | &#10003; Instalacion profesional | &#10003; Servicio en Cordoba Capital</div>
+          <div class="cta-trust">
+            <span class="trust-line">Asesoramiento sin cargo</span>
+            <span class="trust-line">Instalacion profesional</span>
+            <span class="trust-line">Servicio en Cordoba Capital</span>
+          </div>
         </div>
       </div>
     </section>
@@ -819,8 +907,16 @@
 
   <footer class="footer">
     <div class="container footer-inner">
-      <div class="footer-brand">Detecta Seguridad Integral</div>
-      <p class="footer-copy">Cordoba Capital | Sistemas de deteccion de incendios para empresas y edificios</p>
+      <img class="footer-brand" src="assets/brand/logo-detecta.svg" alt="Detecta Seguridad Integral">
+      <div class="footer-meta">
+        <p class="footer-copy">Cordoba Capital | Sistemas de deteccion de incendios para empresas y edificios</p>
+        <a class="footer-social" href="https://www.instagram.com/detecta.arg/" target="_blank" rel="noopener noreferrer">
+          <svg viewBox="0 0 24 24" xmlns="http://www.w3.org/2000/svg">
+            <path d="M7.75 2h8.5A5.75 5.75 0 0 1 22 7.75v8.5A5.75 5.75 0 0 1 16.25 22h-8.5A5.75 5.75 0 0 1 2 16.25v-8.5A5.75 5.75 0 0 1 7.75 2Zm0 1.8A3.95 3.95 0 0 0 3.8 7.75v8.5a3.95 3.95 0 0 0 3.95 3.95h8.5a3.95 3.95 0 0 0 3.95-3.95v-8.5a3.95 3.95 0 0 0-3.95-3.95h-8.5Zm8.95 1.35a1.1 1.1 0 1 1 0 2.2 1.1 1.1 0 0 1 0-2.2ZM12 6.35A5.65 5.65 0 1 1 6.35 12 5.66 5.66 0 0 1 12 6.35Zm0 1.8A3.85 3.85 0 1 0 15.85 12 3.85 3.85 0 0 0 12 8.15Z"/>
+          </svg>
+          Ver Instagram
+        </a>
+      </div>
     </div>
   </footer>
 
