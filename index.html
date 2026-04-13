@@ -142,7 +142,7 @@ nav { position: fixed; top: 0; left: 0; right: 0; z-index: 100; display: flex; a
 
 /* PROYECTOS */
 .proyectos { padding: 6rem 2rem; background: var(--g1); }
-.proyectos-grid { display: grid; grid-template-columns: repeat(3, 1fr); gap: 2rem; margin-top: 3.5rem; }
+.proyectos-grid { display: grid; grid-template-columns: repeat(4, 1fr); gap: 2rem; margin-top: 3.5rem; }
 .proyecto-card { background: var(--g2); border: 1px solid var(--g3); padding: 2rem; transition: all 0.2s; }
 .proyecto-card:hover { border-color: var(--blue); transform: translateY(-2px); }
 .proyecto-tipo { font-size: 0.7rem; font-weight: 700; letter-spacing: 2px; text-transform: uppercase; color: var(--accent); margin-bottom: 0.8rem; }
@@ -203,7 +203,7 @@ footer { padding: 3rem 2rem; border-top: 1px solid var(--g3); }
   .incendios-grid { grid-template-columns: 1fr; gap: 0; }
   .camaras-grid { grid-template-columns: 1fr; gap: 0; }
   .alarmas-grid { grid-template-columns: 1fr; }
-  .proyectos-grid { grid-template-columns: 1fr; }
+  .proyectos-grid { grid-template-columns: 1fr 1fr; }
   .porque-grid { grid-template-columns: 1fr; gap: 2rem; }
   .contacto-inner { grid-template-columns: 1fr; gap: 3rem; }
   .footer-inner { flex-direction: column; gap: 1.5rem; text-align: center; }
@@ -280,19 +280,7 @@ footer { padding: 3rem 2rem; border-top: 1px solid var(--g3); }
   </div>
 </section>
 
-<!-- CLIENTES -->
-<section class="clientes">
-  <div class="clientes-inner">
-    <div class="clientes-label">TRABAJAN CON NOSOTROS:</div>
-    <div class="clientes-list">
-      <span class="cliente-name">ARCOR</span>
-      <span class="cliente-name">COMEGA</span>
-      <span class="cliente-name">MOLINOS</span>
-      <span class="cliente-name">FADEL</span>
-      <span class="cliente-name">+50 EMPRESAS</span>
-    </div>
-  </div>
-</section>
+
 
 <!-- SEGMENTOS -->
 <section class="segmentos" id="segmentos">
@@ -497,33 +485,43 @@ footer { padding: 3rem 2rem; border-top: 1px solid var(--g3); }
     <h2 class="section-title fade-in">LO QUE HACEMOS<br>EN CÓRDOBA</h2>
     <div class="proyectos-grid fade-in">
       <div class="proyecto-card">
-        <div class="proyecto-tipo">INDUSTRIA ALIMENTICIA</div>
-        <h3 class="proyecto-title">MOLINOS JUAN SEMINO</h3>
-        <p class="proyecto-empresa">Planta de molienda · 3.500 m²</p>
+        <div class="proyecto-tipo">INSTITUCIONAL</div>
+        <h3 class="proyecto-title">SERVICIO PENITENCIARIO DE CÓRDOBA</h3>
+        <p class="proyecto-empresa">Establecimiento penitenciario</p>
         <div class="proyecto-items">
-          <span>✓ Detección automática IRAM</span>
-          <span>✓ 8 cámaras perimetrales</span>
-          <span>✓ Extintores ABC/K certificados</span>
+          <span>✓ Proyecto completo detección incendios</span>
+          <span>✓ Equipamiento homologado</span>
+          <span>✓ Central + sensores estratégicos</span>
         </div>
       </div>
       <div class="proyecto-card">
-        <div class="proyecto-tipo">LOGÍSTICA</div>
-        <h3 class="proyecto-title">FADEL DEPÓSITO</h3>
-        <p class="proyecto-empresa">Centro de distribución · 2.800 m²</p>
+        <div class="proyecto-tipo">INDUSTRIA</div>
+        <h3 class="proyecto-title">EDAR - SUPER CEMENTO</h3>
+        <p class="proyecto-empresa">Planta industrial</p>
         <div class="proyecto-items">
-          <span>✓ Rociadores automáticos NFPA</span>
-          <span>✓ 12 cámaras IP 4MP</span>
-          <span>✓ Control de acceso biométrico</span>
+          <span>✓ Sistema videovigilancia completo</span>
+          <span>✓ Cobertura perímetro e interior</span>
+          <span>✓ Monitoreo continuo 24/7</span>
         </div>
       </div>
       <div class="proyecto-card">
         <div class="proyecto-tipo">COMERCIO</div>
-        <h3 class="proyecto-title">COMEGA SHOWROOM</h3>
-        <p class="proyecto-empresa">Local comercial · 850 m²</p>
+        <h3 class="proyecto-title">MERCADO NORTE</h3>
+        <p class="proyecto-empresa">Centro comercial</p>
         <div class="proyecto-items">
-          <span>✓ Relevamiento técnico</span>
-          <span>✓ Actualización normativa</span>
-          <span>✓ Optimización operativa</span>
+          <span>✓ Sistema detección incendios integral</span>
+          <span>✓ Central de control certificada</span>
+          <span>✓ Señalización normativa vigente</span>
+        </div>
+      </div>
+      <div class="proyecto-card">
+        <div class="proyecto-tipo">RETAIL</div>
+        <h3 class="proyecto-title">MEGATONE</h3>
+        <p class="proyecto-empresa">Local comercial</p>
+        <div class="proyecto-items">
+          <span>✓ Actualización red de incendio</span>
+          <span>✓ Reemplazo componentes obsoletos</span>
+          <span>✓ Adecuación normativa IRAM</span>
         </div>
       </div>
     </div>
